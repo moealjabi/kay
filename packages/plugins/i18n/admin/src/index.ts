@@ -30,7 +30,7 @@ import { getTranslation } from './utils/getTranslation';
 import { prefixPluginTranslations } from './utils/prefixPluginTranslations';
 import { mutateCTBContentTypeSchema } from './utils/schemas';
 
-import type { StrapiApp } from '@strapi/admin/strapi-admin';
+import type { StrapiApp } from '@kayona/admin/strapi-admin';
 import type {
   ContentManagerPlugin,
   DocumentActionComponent,

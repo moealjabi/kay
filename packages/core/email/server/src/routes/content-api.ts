@@ -1,5 +1,5 @@
 import type { Core } from '@strapi/types';
-import { createContentApiRoutesFactory } from '@strapi/utils';
+import { createContentApiRoutesFactory } from '@kayona/utils';
 import { EmailRouteValidator } from './validation';
 
 const createRoutes = createContentApiRoutesFactory((): Core.RouterInput['routes'] => {

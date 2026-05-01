@@ -1,4 +1,4 @@
-import { yup, validateYupSchema } from '@strapi/utils';
+import { yup, validateYupSchema } from '@kayona/utils';
 
 const settingsSchema = yup.object({
   aiLocalizations: yup.boolean().default(false),

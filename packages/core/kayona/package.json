@@ -1,5 +1,5 @@
 {
-  "name": "@kayona/kayona",
+  "name": "@kayona/strapi",
   "version": "5.44.0",
   "description": "An open source headless CMS solution to create and manage your own API. It provides a powerful dashboard and features to make your life easier. Databases supported: MySQL, MariaDB, PostgreSQL, SQLite",
   "keywords": [
@@ -108,7 +108,6 @@
     "watch": "run -T rollup -c -w"
   },
   "dependencies": {
-    "@pmmmwh/react-refresh-webpack-plugin": "0.5.15",
     "@kayona/admin": "5.44.0",
     "@kayona/cloud-cli": "5.44.0",
     "@kayona/content-manager": "5.44.0",
@@ -128,6 +127,7 @@
     "@kayona/typescript-utils": "5.44.0",
     "@kayona/upload": "5.44.0",
     "@kayona/utils": "5.44.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "0.5.15",
     "@types/nodemon": "1.19.6",
     "@vitejs/plugin-react-swc": "3.6.0",
     "boxen": "5.1.2",
@@ -172,7 +172,7 @@
     "yup": "0.32.9"
   },
   "devDependencies": {
-    "@kayona/ts-zen": "^0.2.0",
+    "@strapi/ts-zen": "^0.2.0",
     "@types/fs-extra": "11.0.4",
     "@types/inquirer": "9.0.9",
     "@types/jest": "29.5.2",

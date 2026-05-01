@@ -56,9 +56,6 @@
     "test:unit:vitest:watch": "vitest --watch"
   },
   "dependencies": {
-    "@koa/cors": "5.0.0",
-    "@koa/router": "12.0.2",
-    "@paralleldrive/cuid2": "2.2.2",
     "@kayona/admin": "5.44.0",
     "@kayona/database": "5.44.0",
     "@kayona/generators": "5.44.0",
@@ -67,6 +64,9 @@
     "@kayona/types": "5.44.0",
     "@kayona/typescript-utils": "5.44.0",
     "@kayona/utils": "5.44.0",
+    "@koa/cors": "5.0.0",
+    "@koa/router": "12.0.2",
+    "@paralleldrive/cuid2": "2.2.2",
     "@vercel/stega": "0.1.2",
     "bcryptjs": "2.4.3",
     "boxen": "5.1.2",
@@ -113,7 +113,7 @@
     "zod": "3.25.67"
   },
   "devDependencies": {
-    "@kayona/ts-zen": "^0.2.0",
+    "@strapi/ts-zen": "^0.2.0",
     "@swc/core": "1.13.5",
     "@types/bcryptjs": "2.4.3",
     "@types/configstore": "5.0.1",

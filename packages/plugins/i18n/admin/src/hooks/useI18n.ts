@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { useAuth } from '@strapi/admin/strapi-admin';
+import { useAuth } from '@kayona/admin/strapi-admin';
 import { unstable_useDocument as useDocument } from '@strapi/content-manager/strapi-admin';
 import union from 'lodash/union';
 import { useParams } from 'react-router-dom';

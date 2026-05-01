@@ -1,6 +1,6 @@
 import { isArray, isString, isUndefined, constant } from 'lodash/fp';
 import { nonNull, list, objectType } from 'nexus';
-import { contentTypes } from '@strapi/utils';
+import { contentTypes } from '@kayona/utils';
 import type { Struct } from '@strapi/types';
 
 import type { Context } from '../types';

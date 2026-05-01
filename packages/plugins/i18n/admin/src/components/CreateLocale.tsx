@@ -10,7 +10,7 @@ import {
   useAPIErrorHandler,
   useNotification,
   useAuth,
-} from '@strapi/admin/strapi-admin';
+} from '@kayona/admin/strapi-admin';
 import {
   Box,
   Button,

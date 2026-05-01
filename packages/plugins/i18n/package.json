@@ -60,10 +60,10 @@
     "watch": "run -T rollup -c -w"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "1.9.7",
-    "@kayona/design-system": "2.2.0",
-    "@kayona/icons": "2.2.0",
     "@kayona/utils": "5.44.0",
+    "@reduxjs/toolkit": "1.9.7",
+    "@strapi/design-system": "2.2.0",
+    "@strapi/icons": "2.2.0",
     "lodash": "4.18.1",
     "qs": "6.15.0",
     "react-intl": "6.6.2",
@@ -73,10 +73,10 @@
   },
   "devDependencies": {
     "@kayona/admin": "5.44.0",
-    "@kayona/admin-test-utils": "5.44.0",
     "@kayona/content-manager": "5.44.0",
     "@kayona/database": "5.44.0",
     "@kayona/types": "5.44.0",
+    "@strapi/admin-test-utils": "5.44.0",
     "@testing-library/react": "16.3.0",
     "@testing-library/user-event": "14.6.1",
     "koa": "2.16.4",

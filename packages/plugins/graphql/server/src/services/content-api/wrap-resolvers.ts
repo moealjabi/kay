@@ -5,7 +5,7 @@ import {
   GraphQLSchema,
   GraphQLFieldResolver,
 } from 'graphql';
-import { errors } from '@strapi/utils';
+import { errors } from '@kayona/utils';
 import type { Core } from '@strapi/types';
 
 import { createPoliciesMiddleware } from './policy';

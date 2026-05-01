@@ -1,5 +1,5 @@
 import { isArray } from 'lodash/fp';
-import { contentTypes } from '@strapi/utils';
+import { contentTypes } from '@kayona/utils';
 import type { UID, Schema, Core } from '@strapi/types';
 
 const READ_ACTION = 'plugin::content-manager.explorer.read';

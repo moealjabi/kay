@@ -1,4 +1,4 @@
-import { errors } from '@strapi/utils';
+import { errors } from '@kayona/utils';
 import controller from '../content-types';
 import ctServiceFactory from '../../services/content-types';
 

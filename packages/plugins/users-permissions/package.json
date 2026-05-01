@@ -53,9 +53,9 @@
     "watch": "run -T rollup -c -w"
   },
   "dependencies": {
-    "@kayona/design-system": "2.2.0",
-    "@kayona/icons": "2.2.0",
     "@kayona/utils": "5.44.0",
+    "@strapi/design-system": "2.2.0",
+    "@strapi/icons": "2.2.0",
     "bcryptjs": "2.4.3",
     "formik": "2.4.5",
     "grant": "5.4.24",

@@ -8,7 +8,7 @@ import {
   useRBAC,
   Layouts,
   BaseQueryError,
-} from '@strapi/admin/strapi-admin';
+} from '@kayona/admin/strapi-admin';
 import { useAIAvailability } from '@strapi/admin/strapi-admin/ee';
 import {
   Box,

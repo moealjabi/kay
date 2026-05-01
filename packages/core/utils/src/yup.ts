@@ -93,7 +93,7 @@ yup.addMethod(
 
 export class StrapiIDSchema extends yup.MixedSchema {
   constructor() {
-    super({ type: .kayona.D' });
+    super({ type: 'strapi.D' });
   }
 
   _typeCheck(value: unknown): value is string | number {

@@ -1,6 +1,6 @@
 import { entries, mapValues, omit } from 'lodash/fp';
 import { idArg, nonNull } from 'nexus';
-import { pagination } from '@strapi/utils';
+import { pagination } from '@kayona/utils';
 import type { Core, Struct } from '@strapi/types';
 
 const { withDefaultPagination } = pagination;

@@ -4,7 +4,7 @@ import { PERMISSIONS } from './constants';
 import { pluginId } from './pluginId';
 import { prefixPluginTranslations } from './utils/prefixPluginTranslations';
 
-import type { StrapiApp } from '@strapi/admin/strapi-admin';
+import type { StrapiApp } from '@kayona/admin/strapi-admin';
 
 // eslint-disable-next-line import/no-default-export
 export default {

@@ -1,5 +1,5 @@
 import { get } from 'lodash/fp';
-import { errors } from '@strapi/utils';
+import { errors } from '@kayona/utils';
 import type { Core, Struct } from '@strapi/types';
 import { getService } from '../utils';
 

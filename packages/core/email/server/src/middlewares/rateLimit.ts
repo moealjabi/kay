@@ -1,5 +1,5 @@
 import type { Context, Next } from 'koa';
-import utils from '@strapi/utils';
+import utils from '@kayona/utils';
 import { isString, get } from 'lodash/fp';
 import type { Core } from '@strapi/types';
 

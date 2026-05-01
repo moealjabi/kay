@@ -62,11 +62,11 @@
     "watch": "run -T rollup -c -w"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "1.9.7",
     "@kayona/admin": "5.44.0",
-    "@kayona/design-system": "2.2.0",
-    "@kayona/icons": "2.2.0",
     "@kayona/utils": "5.44.0",
+    "@reduxjs/toolkit": "1.9.7",
+    "@strapi/design-system": "2.2.0",
+    "@strapi/icons": "2.2.0",
     "bcryptjs": "2.4.3",
     "cheerio": "^1.0.0",
     "formik": "2.4.5",
@@ -82,9 +82,9 @@
   },
   "devDependencies": {
     "@apidevtools/swagger-parser": "^10.1.0",
-    "@kayona/admin-test-utils": "5.44.0",
     "@kayona/strapi": "5.44.0",
     "@kayona/types": "5.44.0",
+    "@strapi/admin-test-utils": "5.44.0",
     "@testing-library/react": "16.3.0",
     "@testing-library/user-event": "14.6.1",
     "@types/fs-extra": "11.0.4",

@@ -1,4 +1,4 @@
-import { adminApi } from '@strapi/admin/strapi-admin';
+import { adminApi } from '@kayona/admin/strapi-admin';
 
 import { DocumentInfos } from '../types';
 

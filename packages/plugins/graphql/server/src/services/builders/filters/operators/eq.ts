@@ -1,4 +1,4 @@
-import { errors } from '@strapi/utils';
+import { errors } from '@kayona/utils';
 import type * as Nexus from 'nexus';
 import type { Core } from '@strapi/types';
 

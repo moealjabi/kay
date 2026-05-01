@@ -3,7 +3,7 @@
  * E.g the AI metadata flag for automatic translations.
  */
 
-import { errors } from '@strapi/utils';
+import { errors } from '@kayona/utils';
 import type { Utils } from '@strapi/types';
 
 export interface Settings {

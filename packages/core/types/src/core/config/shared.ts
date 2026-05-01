@@ -1,4 +1,4 @@
-import { env } from '@strapi/utils';
+import { env } from '@kayona/utils';
 
 export type ConfigParams = {
   env: typeof env;

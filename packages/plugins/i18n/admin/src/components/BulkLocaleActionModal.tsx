@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { FormErrors, Table, useTable } from '@strapi/admin/strapi-admin';
+import { FormErrors, Table, useTable } from '@kayona/admin/strapi-admin';
 import { Box, Typography, IconButton, Flex, Tooltip, Status, Modal } from '@strapi/design-system';
 import { Pencil, CheckCircle, CrossCircle, ArrowsCounterClockwise } from '@strapi/icons';
 import { stringify } from 'qs';

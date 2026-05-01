@@ -1,7 +1,7 @@
 import { cloneDeep, isEmpty } from 'lodash/fp';
 
 import type { Schema } from '@strapi/types';
-import { async } from '@strapi/utils';
+import { async } from '@kayona/utils';
 import { getService } from '../utils';
 
 /**

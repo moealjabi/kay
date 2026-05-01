@@ -1,5 +1,5 @@
 import permissions from '@strapi/permissions';
-import { providerFactory, sanitize, validate } from '@strapi/utils';
+import { providerFactory, sanitize, validate } from '@kayona/utils';
 import type { z } from 'zod/v4';
 
 import type { Route } from '../core';

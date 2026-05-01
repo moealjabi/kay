@@ -1,7 +1,7 @@
 import { Kind, valueFromASTUntyped } from 'graphql';
 import { omit } from 'lodash/fp';
 import { unionType, scalarType } from 'nexus';
-import { errors } from '@strapi/utils';
+import { errors } from '@kayona/utils';
 import type { Internal, Schema } from '@strapi/types';
 
 import type { Context } from '../types';

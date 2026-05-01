@@ -58,8 +58,8 @@
   },
   "dependencies": {
     "@sentry/node": "7.112.2",
-    "@kayona/design-system": "2.2.0",
-    "@kayona/icons": "2.2.0"
+    "@strapi/design-system": "2.2.0",
+    "@strapi/icons": "2.2.0"
   },
   "devDependencies": {
     "@kayona/strapi": "5.44.0",

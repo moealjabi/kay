@@ -1,5 +1,5 @@
 import type { Core } from '@strapi/types';
-import { createContentApiRoutesFactory } from '@strapi/utils';
+import { createContentApiRoutesFactory } from '@kayona/utils';
 import { I18nLocaleRouteValidator } from './validation';
 
 const createContentApiRoutes = createContentApiRoutesFactory((): Core.RouterInput['routes'] => {

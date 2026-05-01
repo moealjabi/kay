@@ -1,5 +1,5 @@
 import { get, difference } from 'lodash/fp';
-import { errors } from '@strapi/utils';
+import { errors } from '@kayona/utils';
 import type { Context } from '../../types';
 
 const { ApplicationError } = errors;

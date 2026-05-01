@@ -1,5 +1,5 @@
 import { get, merge } from 'lodash/fp';
-import { async, contentTypes, errors } from '@strapi/utils';
+import { async, contentTypes, errors } from '@kayona/utils';
 import type { Internal } from '@strapi/types';
 
 import type { Context } from '../../types';

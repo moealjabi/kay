@@ -1,4 +1,4 @@
-import * as utils from '@strapi/utils';
+import * as utils from '@kayona/utils';
 import { pick } from 'lodash/fp';
 import type { Core } from '@strapi/types';
 import { getService } from '../utils';

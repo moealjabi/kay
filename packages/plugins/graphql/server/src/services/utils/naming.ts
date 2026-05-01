@@ -1,6 +1,6 @@
 import { camelCase, upperFirst, lowerFirst, pipe, get } from 'lodash/fp';
 import { singular } from 'pluralize';
-import { errors } from '@strapi/utils';
+import { errors } from '@kayona/utils';
 import type { Struct, Schema } from '@strapi/types';
 import type { Context } from '../types';
 

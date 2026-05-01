@@ -1,6 +1,6 @@
 import { propOr } from 'lodash/fp';
 import { GraphQLFieldResolver, GraphQLResolveInfo } from 'graphql';
-import { policy as policyUtils, errors } from '@strapi/utils';
+import { policy as policyUtils, errors } from '@kayona/utils';
 import type { Core } from '@strapi/types';
 
 const { PolicyError } = errors;

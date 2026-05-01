@@ -1,4 +1,4 @@
-import { useAuth } from '@strapi/admin/strapi-admin';
+import { useAuth } from '@kayona/admin/strapi-admin';
 import { unstable_useDocument as useDocument } from '@strapi/content-manager/strapi-admin';
 import { renderHook } from '@testing-library/react';
 import { useParams } from 'react-router-dom';

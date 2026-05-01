@@ -49,9 +49,9 @@
     "watch": "run -T rollup -c -w"
   },
   "dependencies": {
-    "@sindresorhus/slugify": "1.1.0",
     "@kayona/typescript-utils": "5.44.0",
     "@kayona/utils": "5.44.0",
+    "@sindresorhus/slugify": "1.1.0",
     "chalk": "4.1.2",
     "fs-extra": "11.3.4",
     "handlebars": "4.7.9",

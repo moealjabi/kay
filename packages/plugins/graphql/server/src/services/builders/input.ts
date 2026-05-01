@@ -1,5 +1,5 @@
 import { inputObjectType, nonNull } from 'nexus';
-import { contentTypes } from '@strapi/utils';
+import { contentTypes } from '@kayona/utils';
 import type { Struct } from '@strapi/types';
 import type { Context } from '../types';
 

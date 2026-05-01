@@ -1,19 +1,19 @@
 {
-  "name": "@strapi/admin-test-utils",
+  "name": "@kayona/admin-test-utils",
   "version": "5.44.0",
   "private": true,
-  "description": "Test utilities for the Strapi administration panel",
+  "description": "Test utilities for the Kayona administration panel",
   "license": "MIT",
   "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
+    "name": "Kayona Solutions SAS",
+    "email": "hello@kayona.io",
+    "url": "https://kayona.io"
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Kayona Solutions SAS",
+      "email": "hello@kayona.io",
+      "url": "https://kayona.io"
     }
   ],
   "exports": {

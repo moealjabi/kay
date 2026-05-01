@@ -62,7 +62,7 @@ export const EmptyAttributes = () => {
           </Box>
           <LinkButton
             tag={Link}
-            to={`https://market.strapi.io?${qs.stringify({ categories: 'Custom fields' })}`}
+            to={`https://market.kayona.io?${qs.stringify({ categories: 'Custom fields' })}`}
             variant="secondary"
             target="_blank"
             startIcon={<Plus />}

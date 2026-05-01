@@ -12,7 +12,7 @@ import { useGetAiUsageQuery } from '@strapi/admin/strapi-admin/ee';
 import { DefaultChatTransport } from 'ai';
 
 import { fetchAI, makeChatFetch, safeParseJson } from '../lib/aiClient';
-import { STRAPI_AI_CHAT_URL, STRAPI_AI_URL } from '../lib/constants';
+import { KAYONA_AI_CHAT_URL, KAYONA_AI_URL } from '../lib/constants';
 import { Attachment } from '../lib/types/attachments';
 import { Schema } from '../lib/types/schema';
 
@@ -164,7 +164,7 @@ export const createAIFetchHook = <T extends keyof AIEndpoints>(endpoint: T) => {
       setError(null);
 
       try {
-        const fullUrl = `${STRAPI_AI_URL}${endpoint}`;
+        const fullUrl = `${KAYONA_AI_URL}${endpoint}`;
         const isJson = !!options.body && !options.formData;
 
         const response = await fetchAI(fullUrl, {
@@ -223,7 +223,7 @@ export const useAIChat: typeof useChat = (props) => {
   return useChat({
     ...props,
     transport: new DefaultChatTransport({
-      api: STRAPI_AI_CHAT_URL,
+      api: KAYONA_AI_CHAT_URL,
       fetch: customFetch,
     }),
   });

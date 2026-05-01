@@ -19,12 +19,12 @@ export const register = async ({ strapi }: { strapi: Core.Strapi }) => {
     strapi.db.migrations.providers.internal.register(addEntryDocumentToReleaseActions);
 
     strapi
-      .hook('strapi::content-types.beforeSync')
+      .hook('kayona::content-types.beforeSync')
       .register(disableContentTypeLocalized)
       .register(deleteActionsOnDisableDraftAndPublish);
 
     strapi
-      .hook('strapi::content-types.afterSync')
+      .hook('kayona::content-types.afterSync')
       .register(deleteActionsOnDeleteContentType)
       .register(enableContentTypeLocalized)
       .register(revalidateChangedContentTypes)

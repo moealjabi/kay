@@ -120,11 +120,11 @@ const deleteConfigurationRecords = async (
   const models: string[] = [];
 
   if (coreStore) {
-    models.push('strapi::core-store');
+    models.push('kayona::core-store');
   }
 
   if (webhook) {
-    models.push('strapi::webhook');
+    models.push('kayona::webhook');
   }
 
   const [results, updateResults] = useResults(models);

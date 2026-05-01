@@ -60,7 +60,7 @@ const EditViewPage = () => {
 
   const persistentQueryConfigs: PersistentQueryConfig = React.useMemo(
     () => ({
-      STRAPI_LOCALE: {
+      KAYONA_LOCALE: {
         paths: ['plugins.i18n.locale'],
         scoped: false,
       },

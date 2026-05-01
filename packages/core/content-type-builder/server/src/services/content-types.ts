@@ -13,7 +13,7 @@ export const isContentTypeVisible = (model: Struct.ContentTypeSchema) =>
 
 export const getRestrictRelationsTo = (contentType: Struct.ContentTypeSchema) => {
   const { uid } = contentType;
-  if (uid === coreUids.STRAPI_USER) {
+  if (uid === coreUids.KAYONA_USER) {
     // TODO: replace with an obj { relation: 'x', bidirectional: true|false }
     return ['oneWay', 'manyWay'];
   }

@@ -1,20 +1,20 @@
 {
-  "name": "@strapi/provider-email-nodemailer",
+  "name": "@kayona/provider-email-nodemailer",
   "version": "5.44.0",
-  "description": "Nodemailer provider for Strapi",
+  "description": "Nodemailer provider for Kayona",
   "keywords": [
     "strapi",
     "email",
     "provider",
     "nodemailer"
   ],
-  "homepage": "https://strapi.io",
+  "homepage": "https://kayona.io",
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/moealjabi/kay/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strapi/strapi.git",
+    "url": "https://github.com/moealjabi/kay.git",
     "directory": "packages/providers/email-nodemailer"
   },
   "license": "SEE LICENSE IN LICENSE",
@@ -23,9 +23,9 @@
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Kayona Solutions SAS",
+      "email": "hello@kayona.io",
+      "url": "https://kayona.io"
     }
   ],
   "contributors": [

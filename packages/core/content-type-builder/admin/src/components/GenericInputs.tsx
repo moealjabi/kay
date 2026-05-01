@@ -188,7 +188,7 @@ const GenericInput = ({
    inputs, in order to make them controlled components. This variable
    acts as a fallback for now, to prevent React errors in devopment mode
 
-   See: https://github.com/strapi/strapi/pull/12861
+   See: https://github.com/moealjabi/kay/pull/12861
   */
   const valueWithEmptyStringFallback = value ?? '';
 

@@ -319,7 +319,7 @@ const ReleasesPage = () => {
               <StyledAlert
                 marginBottom={6}
                 action={
-                  <Link href="https://strapi.io/pricing-cloud" isExternal>
+                  <Link href="https://kayona.io/pricing-cloud" isExternal>
                     {formatMessage({
                       id: 'content-releases.pages.Releases.max-limit-reached.action',
                       defaultMessage: 'Explore plans',

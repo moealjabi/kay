@@ -33,7 +33,7 @@ const admin: Plugin.Config.AdminInput = {
       position: 4,
     });
 
-    if (window.strapi.future.isEnabled('unstableMediaLibrary')) {
+    if (window.kayona.future.isEnabled('unstableMediaLibrary')) {
       app.addReducers({ uploadProgress: uploadProgressReducer });
 
       app.addComponents([

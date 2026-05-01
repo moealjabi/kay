@@ -31,11 +31,11 @@ export const FreeTrialEndedModal = () => {
   const { formatMessage } = useIntl();
   const [open, setOpen] = useState(true);
   const [previouslyOpen, setPreviouslyOpen] = useScopedPersistentState(
-    'STRAPI_FREE_TRIAL_ENDED_MODAL',
+    'KAYONA_FREE_TRIAL_ENDED_MODAL',
     false
   );
   const [cachedTrialEndsAt] = useScopedPersistentState<string | undefined>(
-    'STRAPI_FREE_TRIAL_ENDS_AT',
+    'KAYONA_FREE_TRIAL_ENDS_AT',
     undefined
   );
 
@@ -47,7 +47,7 @@ export const FreeTrialEndedModal = () => {
   // We show the banner to encourage the user to upgrade (for 7 days after the trial ends)
   const isTrialEndedRecently = Boolean(
     !license?.isTrial &&
-      !window.strapi.isEE &&
+      !window.kayona.isEE &&
       cachedTrialEndsAt &&
       isAfter(new Date(cachedTrialEndsAt), sevenDaysAgo)
   );

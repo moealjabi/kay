@@ -272,7 +272,7 @@
   "preview.info.single-click-hint": "Kliknij dwukrotnie, aby edytować",
   "preview.error.invalid-field-path": "Nie można znaleźć tego pola w bieżącym dokumencie",
   "preview.error.relations-not-handled": "Edycja relacji w trybie inline nie jest obecnie obsługiwana.",
-  "preview.error.incomplete-strapi-source": "W tym polu brakuje niektórych wymaganych informacji podglądu",
+  "preview.error.incomplete-kayona-source": "W tym polu brakuje niektórych wymaganych informacji podglądu",
   "preview.error.different-document": "To pole pochodzi z innego dokumentu",
   "relation.create": "Utwórz relację",
   "relation.add": "Dodaj lub utwórz relację",

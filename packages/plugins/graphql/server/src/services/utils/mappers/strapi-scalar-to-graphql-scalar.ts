@@ -5,9 +5,9 @@ import type { Context } from '../../types';
 const { ApplicationError } = errors;
 
 export default ({ strapi }: Context) => {
-  const { STRAPI_SCALARS, SCALARS_ASSOCIATIONS } = strapi.plugin('graphql').service('constants');
+  const { KAYONA_SCALARS, SCALARS_ASSOCIATIONS } = strapi.plugin('graphql').service('constants');
 
-  const missingStrapiScalars = difference(STRAPI_SCALARS, Object.keys(SCALARS_ASSOCIATIONS));
+  const missingStrapiScalars = difference(KAYONA_SCALARS, Object.keys(SCALARS_ASSOCIATIONS));
 
   if (missingStrapiScalars.length > 0) {
     throw new ApplicationError('Some Strapi scalars are not handled in the GraphQL scalars mapper');

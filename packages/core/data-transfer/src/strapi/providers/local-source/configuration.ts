@@ -13,14 +13,14 @@ export const createConfigurationStream = (strapi: Core.Strapi): Readable => {
     (async function* configurationGenerator(): AsyncGenerator<IConfiguration> {
       // Core Store
       const coreStoreStream = chain([
-        strapi.db.queryBuilder('strapi::core-store').stream(),
+        strapi.db.queryBuilder('kayona::core-store').stream(),
         (data) => set('value', JSON.parse(data.value), data),
         wrapConfigurationItem('core-store'),
       ]);
 
       // Webhook
       const webhooksStream = chain([
-        strapi.db.queryBuilder('strapi::webhook').stream(),
+        strapi.db.queryBuilder('kayona::webhook').stream(),
         wrapConfigurationItem('webhook'),
       ]);
 

@@ -1,5 +1,5 @@
 {
-  "name": "@strapi/provider-upload-aws-s3",
+  "name": "@kayona/provider-upload-aws-s3",
   "version": "5.44.0",
   "description": "AWS S3 provider for strapi upload",
   "keywords": [
@@ -8,26 +8,26 @@
     "s3",
     "strapi"
   ],
-  "homepage": "https://strapi.io",
+  "homepage": "https://kayona.io",
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/moealjabi/kay/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strapi/strapi.git",
+    "url": "https://github.com/moealjabi/kay.git",
     "directory": "packages/providers/upload-aws-s3"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
+    "name": "Kayona Solutions SAS",
+    "email": "hello@kayona.io",
+    "url": "https://kayona.io"
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Kayona Solutions SAS",
+      "email": "hello@kayona.io",
+      "url": "https://kayona.io"
     }
   ],
   "main": "./dist/index.js",

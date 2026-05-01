@@ -88,7 +88,7 @@ const checkIfShouldShowSurvey = (settings: NpsSurveySettings) => {
   // we assume that they would have enabled the NPS feature if they had the chance.
 
   // Global strapi disable for NSP.
-  if (window.strapi.flags.nps === false) {
+  if (window.kayona.flags.nps === false) {
     return false;
   }
 
@@ -194,11 +194,11 @@ const NpsSurvey = () => {
         comment: npsSurveyFeedback,
         environment: currentEnvironment,
         version: strapiVersion ?? undefined,
-        license: window.strapi.projectType,
-        isHostedOnStrapiCloud: process.env.STRAPI_HOSTING === 'strapi.cloud',
+        license: window.kayona.projectType,
+        isHostedOnStrapiCloud: process.env.KAYONA_HOSTING === 'strapi.cloud',
       };
       const res = await fetch(
-        `${process.env.STRAPI_ANALYTICS_URL || 'https://analytics.strapi.io'}/submit-nps`,
+        `${process.env.KAYONA_ANALYTICS_URL || 'https://analytics.kayona.io'}/submit-nps`,
         {
           method: 'POST',
           headers: {
@@ -445,7 +445,7 @@ interface NpsSurveySettings {
  */
 function useNpsSurveySettings() {
   const [npsSurveySettings, setNpsSurveySettings] = usePersistentState<NpsSurveySettings>(
-    'STRAPI_NPS_SURVEY_SETTINGS',
+    'KAYONA_NPS_SURVEY_SETTINGS',
     {
       enabled: true,
       lastResponseDate: null,

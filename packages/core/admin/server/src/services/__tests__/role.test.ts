@@ -544,7 +544,7 @@ describe('Role', () => {
       expect(create).toHaveBeenNthCalledWith(1, {
         data: {
           name: 'Super Admin',
-          code: 'strapi-super-admin',
+          code: 'kayona-super-admin',
           description: 'Super Admins can access and manage all features and settings.',
         },
       });
@@ -554,7 +554,7 @@ describe('Role', () => {
       expect(create).toHaveBeenNthCalledWith(2, {
         data: {
           name: 'Editor',
-          code: 'strapi-editor',
+          code: 'kayona-editor',
           description: 'Editors can manage and publish contents including those of other users.',
         },
       });
@@ -562,7 +562,7 @@ describe('Role', () => {
       expect(create).toHaveBeenNthCalledWith(3, {
         data: {
           name: 'Author',
-          code: 'strapi-author',
+          code: 'kayona-author',
           description: 'Authors can manage the content they have created.',
         },
       });

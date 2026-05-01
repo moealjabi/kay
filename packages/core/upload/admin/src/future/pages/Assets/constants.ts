@@ -1,7 +1,7 @@
 import { getTranslationKey } from '../../utils/translations';
 
 export const localStorageKeys = {
-  view: `STRAPI_UPLOAD_LIBRARY_VIEW`,
+  view: `KAYONA_UPLOAD_LIBRARY_VIEW`,
 };
 
 export const viewOptions = {

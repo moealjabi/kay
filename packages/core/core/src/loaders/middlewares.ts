@@ -9,7 +9,7 @@ export default async function loadMiddlewares(strapi: Core.Strapi) {
   const localMiddlewares = await loadLocalMiddlewares(strapi);
 
   strapi.get('middlewares').add(`global::`, localMiddlewares);
-  strapi.get('middlewares').add(`strapi::`, internalMiddlewares);
+  strapi.get('middlewares').add(`kayona::`, internalMiddlewares);
 }
 
 const loadLocalMiddlewares = async (strapi: Core.Strapi) => {

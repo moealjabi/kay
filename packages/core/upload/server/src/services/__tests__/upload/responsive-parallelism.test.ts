@@ -1,5 +1,5 @@
 // Mocked sharp: responsive format generation must not run multiple toFile in parallel
-// (github.com/strapi/strapi#26046).
+// (github.com/moealjabi/kay#26046).
 import _ from 'lodash';
 
 jest.mock('sharp', () => {

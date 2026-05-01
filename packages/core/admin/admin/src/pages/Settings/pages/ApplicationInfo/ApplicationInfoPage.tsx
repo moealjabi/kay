@@ -51,7 +51,7 @@ const ApplicationInfoPage = () => {
         )
       ).AdminSeatInfoEE
   );
-  const isAiEnabled = window.strapi.ai?.enabled !== false;
+  const isAiEnabled = window.kayona.ai?.enabled !== false;
   const AIUsageData = useEnterprise(
     AIUageDataCE,
     async () =>
@@ -183,7 +183,7 @@ const ApplicationInfoPage = () => {
                       <Typography>v{strapiVersion}</Typography>
                       {shouldUpdateStrapi && (
                         <Link
-                          href={`https://github.com/strapi/strapi/releases/tag/${latestStrapiReleaseTag}`}
+                          href={`https://github.com/moealjabi/kay/releases/tag/${latestStrapiReleaseTag}`}
                           endIcon={<ExternalLink />}
                         >
                           {formatMessage({
@@ -212,7 +212,7 @@ const ApplicationInfoPage = () => {
                           { communityEdition }
                         )}
                       </Typography>
-                      <Link href="https://strapi.io/pricing-self-hosted" endIcon={<ExternalLink />}>
+                      <Link href="https://kayona.io/pricing-self-hosted" endIcon={<ExternalLink />}>
                         {formatMessage({
                           id: 'Settings.application.link-pricing',
                           defaultMessage: 'See all pricing plans',

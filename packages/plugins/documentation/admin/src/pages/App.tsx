@@ -259,10 +259,10 @@ const createDocumentationHref = (path: string) => {
   }
 
   if (path.startsWith('/')) {
-    return `${window.strapi.backendURL}${path}`;
+    return `${window.kayona.backendURL}${path}`;
   }
 
-  return `${window.strapi.backendURL}/${path}`;
+  return `${window.kayona.backendURL}/${path}`;
 };
 
 export { App };

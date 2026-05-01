@@ -50,7 +50,7 @@ const useMenu = (shouldUpdateStrapi: boolean) => {
           id: 'global.marketplace',
           defaultMessage: 'Marketplace',
         },
-        to: 'https://market.strapi.io',
+        to: 'https://market.kayona.io',
         target: '_blank',
         permissions: permissions.marketplace?.main ?? [],
         position: 7,

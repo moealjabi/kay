@@ -301,7 +301,7 @@ describe('User', () => {
             id: 3,
             name: 'Author',
             description: 'Authors can manage the content they have created.',
-            code: 'strapi-author',
+            code: 'kayona-author',
           },
         ],
       }));

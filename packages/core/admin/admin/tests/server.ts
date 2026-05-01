@@ -8,7 +8,7 @@ export const server: SetupServer = setupServer(
     /**
      * TRACKING
      */
-    rest.post('https://analytics.strapi.io/api/v2/track', (req, res, ctx) => {
+    rest.post('https://analytics.kayona.io/api/v2/track', (req, res, ctx) => {
       return res(ctx.status(200));
     }),
     /**
@@ -22,12 +22,12 @@ export const server: SetupServer = setupServer(
           data: [
             {
               id: 1,
-              code: 'strapi-editor',
+              code: 'kayona-editor',
               name: 'Editor',
             },
             {
               id: 2,
-              code: 'strapi-author',
+              code: 'kayona-author',
               name: 'Author',
             },
           ],
@@ -40,7 +40,7 @@ export const server: SetupServer = setupServer(
         ctx.json({
           data: {
             id: 1,
-            code: 'strapi-editor',
+            code: 'kayona-editor',
             params: {
               filters: req.url.searchParams.get('filters'),
             },
@@ -98,8 +98,8 @@ export const server: SetupServer = setupServer(
             lastname: 'Doe',
             emai: 'test@testing.com',
             roles: [
-              { id: 1, code: 'strapi-editor', name: 'Editor' },
-              { id: 2, code: 'strapi-super-admin', name: 'Super Admin' },
+              { id: 1, code: 'kayona-editor', name: 'Editor' },
+              { id: 2, code: 'kayona-super-admin', name: 'Super Admin' },
             ],
             params: {
               some: req.url.searchParams.get('some'),
@@ -440,7 +440,7 @@ export const server: SetupServer = setupServer(
      * NPS SURVEY
      *
      */
-    rest.post('https://analytics.strapi.io/submit-nps', (req, res, ctx) => {
+    rest.post('https://analytics.kayona.io/submit-nps', (req, res, ctx) => {
       return res(ctx.status(200));
     }),
     /**
@@ -666,7 +666,7 @@ export const server: SetupServer = setupServer(
                       id: 1,
                       name: 'Super Admin',
                       description: 'Super Admins can access and manage all features and settings.',
-                      code: 'strapi-super-admin',
+                      code: 'kayona-super-admin',
                     },
                   ],
                 },
@@ -699,7 +699,7 @@ export const server: SetupServer = setupServer(
                       name: 'Editor',
                       description:
                         'Editors can manage and publish contents including those of other users.',
-                      code: 'strapi-editor',
+                      code: 'kayona-editor',
                     },
                   ],
                 },
@@ -743,7 +743,7 @@ export const server: SetupServer = setupServer(
                   id: 1,
                   name: 'Super Admin',
                   description: 'Super Admins can access and manage all features and settings.',
-                  code: 'strapi-super-admin',
+                  code: 'kayona-super-admin',
                 },
               ],
             },

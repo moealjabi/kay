@@ -89,7 +89,7 @@ const storeToken = (token: string): void => {
  * Returns the new token on success, or null on failure.
  */
 const refreshAccessToken = async (): Promise<string | null> => {
-  const backendURL = window.strapi.backendURL;
+  const backendURL = window.kayona.backendURL;
 
   try {
     const response = await fetch(`${backendURL}/admin/access-token`, {
@@ -252,7 +252,7 @@ type FetchClient = {
  * ```
  */
 const getFetchClient = (defaultOptions: FetchConfig = {}): FetchClient => {
-  const backendURL = window.strapi.backendURL;
+  const backendURL = window.kayona.backendURL;
 
   /**
    * Create default headers with the current token.

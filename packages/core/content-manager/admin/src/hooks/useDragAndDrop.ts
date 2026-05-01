@@ -74,7 +74,7 @@ const useDragAndDrop = <
 >(
   active: boolean,
   {
-    type = 'STRAPI_DND',
+    type = 'KAYONA_DND',
     index,
     item,
     onStart,

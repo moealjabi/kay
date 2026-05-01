@@ -18,7 +18,7 @@ const createReleaseValidationService = ({ strapi }: { strapi: Core.Strapi }) => 
   ) {
     /**
      * Asserting the type, otherwise TS complains: 'release.actions' is of type 'unknown', even though the types come through for non-populated fields...
-     * Possibly related to the comment on GetValues: https://github.com/strapi/strapi/blob/main/packages/core/types/src/modules/entity-service/result.ts
+     * Possibly related to the comment on GetValues: https://github.com/moealjabi/kay/blob/main/packages/core/types/src/modules/entity-service/result.ts
      */
     const release = (await strapi.db.query(RELEASE_MODEL_UID).findOne({
       where: {

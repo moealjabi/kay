@@ -1426,7 +1426,7 @@ describe('List', () => {
         children: [
           {
             type: 'link',
-            url: 'https://strapi.io',
+            url: 'https://kayona.io',
             rel: '',
             target: '',
             children: [
@@ -1458,7 +1458,7 @@ describe('List', () => {
             children: [
               {
                 type: 'link',
-                url: 'https://strapi.io',
+                url: 'https://kayona.io',
                 rel: '',
                 target: '',
                 children: [

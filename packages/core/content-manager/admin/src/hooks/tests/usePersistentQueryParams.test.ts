@@ -227,14 +227,14 @@ describe('usePersistentPartialQueryParams', () => {
 
   it('should load scoped config values from scoped localStorage key', async () => {
     const config = {
-      'STRAPI_LIST_VIEW_SETTINGS:api::article.article': {
+      'KAYONA_LIST_VIEW_SETTINGS:api::article.article': {
         paths: ['pageSize', 'sort'],
         scoped: true,
       },
     };
 
     window.localStorage.setItem(
-      'STRAPI_LIST_VIEW_SETTINGS:api::article.article:test-uuid',
+      'KAYONA_LIST_VIEW_SETTINGS:api::article.article:test-uuid',
       JSON.stringify({ pageSize: 20, sort: 'name:asc' })
     );
 
@@ -247,14 +247,14 @@ describe('usePersistentPartialQueryParams', () => {
 
   it('should not load scoped values from unscoped key', () => {
     const config = {
-      'STRAPI_LIST_VIEW_SETTINGS:api::article.article': {
+      'KAYONA_LIST_VIEW_SETTINGS:api::article.article': {
         paths: ['pageSize', 'sort'],
         scoped: true,
       },
     };
 
     window.localStorage.setItem(
-      'STRAPI_LIST_VIEW_SETTINGS:api::article.article',
+      'KAYONA_LIST_VIEW_SETTINGS:api::article.article',
       JSON.stringify({ pageSize: 20, sort: 'name:asc' })
     );
 

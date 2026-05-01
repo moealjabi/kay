@@ -50,7 +50,7 @@ const BaseHeaderLayout = React.forwardRef<HTMLDivElement, BaseHeaderLayoutProps>
             initial: HEIGHT_TOP_NAVIGATION,
             medium: HEIGHT_TOP_NAVIGATION_MEDIUM,
           }}
-          data-strapi-header-sticky
+          data-kayona-header-sticky
         >
           <Flex alignItems="center" justifyContent="space-between" wrap="wrap" width="100%">
             <Flex>
@@ -89,7 +89,7 @@ const BaseHeaderLayout = React.forwardRef<HTMLDivElement, BaseHeaderLayoutProps>
           large: navigationAction ? 6 : 8,
         }}
         background="neutral100"
-        data-strapi-header
+        data-kayona-header
       >
         <Flex direction="column" alignItems="initial" gap={3}>
           {navigationAction}

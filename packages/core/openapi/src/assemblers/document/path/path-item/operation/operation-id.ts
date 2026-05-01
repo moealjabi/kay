@@ -1,6 +1,6 @@
 import type { Core } from '@strapi/types';
 
-import { REGEX_STRAPI_PATH_PARAMS } from '../../../../../constants';
+import { REGEX_KAYONA_PATH_PARAMS } from '../../../../../constants';
 
 import type { OperationContext } from '../../../../../types';
 import { createDebugger } from '../../../../../utils';
@@ -49,7 +49,7 @@ export class OperationIDAssembler implements Assembler.Operation {
       const formatPart = (str: string) => (/[_/]$/.test(appendix) ? str : `_${str}`);
 
       pathParts.forEach((part) => {
-        const match = REGEX_STRAPI_PATH_PARAMS.exec(part);
+        const match = REGEX_KAYONA_PATH_PARAMS.exec(part);
 
         appendix += match
           ? // Parameter

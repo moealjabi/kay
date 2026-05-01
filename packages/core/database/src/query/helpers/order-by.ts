@@ -11,8 +11,8 @@ type OrderByCtx = Ctx & { alias?: string };
 type OrderBy = string | { [key: string]: 'asc' | 'desc' } | OrderBy[];
 type OrderByValue = { column: string; order?: 'asc' | 'desc' };
 
-const COL_STRAPI_ROW_NUMBER = '__strapi_row_number';
-const COL_STRAPI_ORDER_BY_PREFIX = '__strapi_order_by';
+const COL_KAYONA_ROW_NUMBER = '__strapi_row_number';
+const COL_KAYONA_ORDER_BY_PREFIX = '__strapi_order_by';
 
 export const processOrderBy = (orderBy: OrderBy, ctx: OrderByCtx): OrderByValue[] => {
   const { db, uid, qb, alias } = ctx;
@@ -75,7 +75,7 @@ export const processOrderBy = (orderBy: OrderBy, ctx: OrderByCtx): OrderByValue[
 export const getStrapiOrderColumnAlias = (column: string) => {
   const trimmedColumnName = column.replaceAll('.', '_');
 
-  return `${COL_STRAPI_ORDER_BY_PREFIX}__${trimmedColumnName}`;
+  return `${COL_KAYONA_ORDER_BY_PREFIX}__${trimmedColumnName}`;
 };
 
 /**
@@ -154,7 +154,7 @@ export const wrapWithDeepSort = (originalQuery: knex.Knex.QueryBuilder, ctx: Ord
         ...orderByColumns
       )
       // The row number is used to assign an index to every row in every partition
-      .rowNumber(COL_STRAPI_ROW_NUMBER, (subQuery) => {
+      .rowNumber(COL_KAYONA_ROW_NUMBER, (subQuery) => {
         for (const orderByClause of prefixedOrderBy) {
           subQuery.orderBy(orderByClause.column, orderByClause.order, 'last');
         }
@@ -188,7 +188,7 @@ export const wrapWithDeepSort = (originalQuery: knex.Knex.QueryBuilder, ctx: Ord
         .on(`${partitionedQueryAlias}.id`, `${resultQueryAlias}.id`)
         // By only selecting the rows number equal to 1, we make sure we don't have duplicate, and that
         // we're selecting rows in the correct order amongst the groups created by the "partition by"
-        .andOnVal(`${partitionedQueryAlias}.${COL_STRAPI_ROW_NUMBER}`, '=', 1);
+        .andOnVal(`${partitionedQueryAlias}.${COL_KAYONA_ROW_NUMBER}`, '=', 1);
     });
 
   // Re-apply pagination params

@@ -1,7 +1,7 @@
 {
-  "name": "create-strapi",
+  "name": "create-kayona",
   "version": "5.44.0",
-  "description": "Generate a new Strapi application.",
+  "description": "Generate a new Kayona application.",
   "keywords": [
     "create-strapi",
     "create",
@@ -9,26 +9,26 @@
     "generate",
     "strapi"
   ],
-  "homepage": "https://strapi.io",
+  "homepage": "https://kayona.io",
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/moealjabi/kay/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strapi/strapi.git",
+    "url": "https://github.com/moealjabi/kay.git",
     "directory": "packages/cli/create-strapi"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
+    "name": "Kayona Solutions SAS",
+    "email": "hello@kayona.io",
+    "url": "https://kayona.io"
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Kayona Solutions SAS",
+      "email": "hello@kayona.io",
+      "url": "https://kayona.io"
     }
   ],
   "main": "",

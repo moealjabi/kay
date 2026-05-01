@@ -283,7 +283,7 @@ const DeployNowWidget = () => {
           })}
         </Typography>
       </Flex>
-      <LinkButton href="https://cloud.strapi.io/login" isExternal size="L" startIcon={<Cloud />}>
+      <LinkButton href="https://cloud.kayona.io/login" isExternal size="L" startIcon={<Cloud />}>
         {formatMessage({ id: 'HomePage.widget.deploy-now.button', defaultMessage: 'Deploy Now' })}
       </LinkButton>
     </Flex>

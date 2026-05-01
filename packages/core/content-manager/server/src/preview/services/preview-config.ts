@@ -35,7 +35,7 @@ const createPreviewConfigService = ({ strapi }: { strapi: Core.Strapi }) => {
         )[];
 
         const configuredMiddlewares = extendMiddlewareConfiguration(middlewares, {
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: {
             contentSecurityPolicy: {
               directives: {

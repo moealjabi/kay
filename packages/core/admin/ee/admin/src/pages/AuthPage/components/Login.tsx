@@ -14,11 +14,11 @@ const DividerFull = styled(Divider)`
 const LoginEE = (loginProps: LoginProps) => {
   const { formatMessage } = useIntl();
   const { isLoading, data: providers = [] } = useGetProvidersQuery(undefined, {
-    skip: !window.strapi.features.isEnabled(window.strapi.features.SSO),
+    skip: !window.kayona.features.isEnabled(window.kayona.features.SSO),
   });
 
   if (
-    !window.strapi.features.isEnabled(window.strapi.features.SSO) ||
+    !window.kayona.features.isEnabled(window.kayona.features.SSO) ||
     (!isLoading && providers.length === 0)
   ) {
     return <Login {...loginProps} />;

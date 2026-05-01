@@ -533,7 +533,7 @@ const Register = ({ hasAdmin }: RegisterProps) => {
                     },
                     {
                       terms: (
-                        <A target="_blank" href="https://strapi.io/terms" rel="noreferrer">
+                        <A target="_blank" href="https://kayona.io/terms" rel="noreferrer">
                           {formatMessage({
                             id: 'Auth.privacy-policy-agreement.terms',
                             defaultMessage: 'terms',
@@ -541,7 +541,7 @@ const Register = ({ hasAdmin }: RegisterProps) => {
                         </A>
                       ),
                       policy: (
-                        <A target="_blank" href="https://strapi.io/privacy" rel="noreferrer">
+                        <A target="_blank" href="https://kayona.io/privacy" rel="noreferrer">
                           {formatMessage({
                             id: 'Auth.privacy-policy-agreement.policy',
                             defaultMessage: 'policy',

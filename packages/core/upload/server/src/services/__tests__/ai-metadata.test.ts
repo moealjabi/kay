@@ -76,13 +76,13 @@ describe('AI Metadata Service', () => {
       }),
     };
 
-    process.env.STRAPI_AI_URL = 'https://ai.strapi.com';
+    process.env.KAYONA_AI_URL = 'https://ai.strapi.com';
 
     aiMetadataService = createAIMetadataService({ strapi: mockStrapi });
   });
 
   afterEach(() => {
-    delete process.env.STRAPI_AI_URL;
+    delete process.env.KAYONA_AI_URL;
   });
 
   describe('isEnabled', () => {

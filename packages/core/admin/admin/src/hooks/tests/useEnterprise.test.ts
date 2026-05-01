@@ -17,11 +17,11 @@ describe('useEnterprise (CE)', () => {
 
 describe('useEnterprise (EE)', () => {
   beforeAll(() => {
-    window.strapi.isEE = true;
+    window.kayona.isEE = true;
   });
 
   afterAll(() => {
-    window.strapi.isEE = false;
+    window.kayona.isEE = false;
   });
 
   test('Returns default data on first render and EE data on second', async () => {

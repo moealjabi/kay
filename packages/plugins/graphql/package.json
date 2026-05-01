@@ -1,27 +1,27 @@
 {
-  "name": "@strapi/plugin-graphql",
+  "name": "@kayona/plugin-graphql",
   "version": "5.44.0",
   "description": "Adds GraphQL endpoint with default API methods.",
-  "homepage": "https://strapi.io",
+  "homepage": "https://kayona.io",
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/moealjabi/kay/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strapi/strapi.git",
+    "url": "https://github.com/moealjabi/kay.git",
     "directory": "packages/plugins/graphql"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
+    "name": "Kayona Solutions SAS",
+    "email": "hello@kayona.io",
+    "url": "https://kayona.io"
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Kayona Solutions SAS",
+      "email": "hello@kayona.io",
+      "url": "https://kayona.io"
     }
   ],
   "exports": {
@@ -63,9 +63,9 @@
     "@graphql-tools/schema": "10.0.3",
     "@graphql-tools/utils": "^10.1.3",
     "@koa/cors": "5.0.0",
-    "@strapi/design-system": "2.2.0",
-    "@strapi/icons": "2.2.0",
-    "@strapi/utils": "5.44.0",
+    "@kayona/design-system": "2.2.0",
+    "@kayona/icons": "2.2.0",
+    "@kayona/utils": "5.44.0",
     "graphql": "^16.8.1",
     "graphql-depth-limit": "^1.1.0",
     "graphql-playground-middleware-koa": "^1.6.21",
@@ -77,8 +77,8 @@
     "pluralize": "8.0.0"
   },
   "devDependencies": {
-    "@strapi/strapi": "5.44.0",
-    "@strapi/types": "5.44.0",
+    "@kayona/strapi": "5.44.0",
+    "@kayona/types": "5.44.0",
     "@types/graphql-depth-limit": "1.1.5",
     "@types/koa-bodyparser": "4.3.12",
     "@types/koa__cors": "5.0.0",
@@ -93,7 +93,7 @@
     "typescript": "5.4.5"
   },
   "peerDependencies": {
-    "@strapi/strapi": "^5.0.0",
+    "@kayona/strapi": "^5.0.0",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",
     "react-router-dom": "^6.30.3",

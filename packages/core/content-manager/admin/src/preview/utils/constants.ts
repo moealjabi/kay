@@ -23,8 +23,8 @@ export const INTERNAL_EVENTS = scriptResponse!.INTERNAL_EVENTS;
  */
 export const PUBLIC_EVENTS = {
   PREVIEW_READY: 'previewReady',
-  STRAPI_UPDATE: 'strapiUpdate',
-  STRAPI_SCRIPT: 'strapiScript',
+  KAYONA_UPDATE: 'strapiUpdate',
+  KAYONA_SCRIPT: 'strapiScript',
 } as const;
 
 /**
@@ -46,7 +46,7 @@ export const PREVIEW_ERROR_MESSAGES = {
       defaultMessage: 'Inline editing for relations is not currently supported.',
     },
   },
-  INCOMPLETE_STRAPI_SOURCE: {
+  INCOMPLETE_KAYONA_SOURCE: {
     type: 'danger',
     message: {
       id: 'content-manager.preview.error.incomplete-strapi-source',

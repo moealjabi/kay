@@ -17,8 +17,8 @@ export const WIDGET_SIZING = {
 } as const;
 
 export const WIDGET_DATA_ATTRIBUTES = {
-  WIDGET_ID: 'data-strapi-widget-id',
-  GRID_CONTAINER: 'data-strapi-grid-container',
+  WIDGET_ID: 'data-kayona-widget-id',
+  GRID_CONTAINER: 'data-kayona-grid-container',
 } as const;
 
 export const getWidgetElement = (uid: string): HTMLElement | null => {

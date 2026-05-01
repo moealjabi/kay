@@ -726,7 +726,7 @@ describe('API Token', () => {
 
     test('It lists all the tokens (super admin sees all)', async () => {
       const findMany = jest.fn().mockResolvedValue(tokens);
-      const superAdmin = { id: 1, roles: [{ code: 'strapi-super-admin' }] } as any;
+      const superAdmin = { id: 1, roles: [{ code: 'kayona-super-admin' }] } as any;
 
       global.strapi = {
         db: {
@@ -749,7 +749,7 @@ describe('API Token', () => {
 
     test('Non-super-admin only sees ownerless tokens and own tokens', async () => {
       const findMany = jest.fn().mockResolvedValue(tokens);
-      const regularUser = { id: 2, roles: [{ code: 'strapi-editor' }] } as any;
+      const regularUser = { id: 2, roles: [{ code: 'kayona-editor' }] } as any;
 
       global.strapi = {
         db: {
@@ -781,7 +781,7 @@ describe('API Token', () => {
           adminUserOwner,
         },
       ]);
-      const superAdmin = { id: 1, roles: [{ code: 'strapi-super-admin' }] } as any;
+      const superAdmin = { id: 1, roles: [{ code: 'kayona-super-admin' }] } as any;
 
       setupStrapiMock({
         db: {
@@ -1618,7 +1618,7 @@ describe('API Token', () => {
     });
 
     test('Enforces owner ceiling when updating admin token permissions', async () => {
-      const ownerUser = { id: 42, roles: [{ code: 'strapi-editor' }] };
+      const ownerUser = { id: 42, roles: [{ code: 'kayona-editor' }] };
 
       const originalToken = {
         id: 1,
@@ -2245,7 +2245,7 @@ describe('API Token', () => {
     });
 
     test('Skips sync for super-admin users', async () => {
-      const superAdmin = { id: 1, roles: [{ code: 'strapi-super-admin' }] };
+      const superAdmin = { id: 1, roles: [{ code: 'kayona-super-admin' }] };
       const { deleteByIdsMock } = buildStrapi({
         user: superAdmin,
         userPermissions: [],
@@ -2258,7 +2258,7 @@ describe('API Token', () => {
     });
 
     test('Deletes token permissions that are no longer in the user scope', async () => {
-      const user = { id: 1, roles: [{ code: 'strapi-editor' }] };
+      const user = { id: 1, roles: [{ code: 'kayona-editor' }] };
       const userPermissions = [
         {
           action: 'plugin::cm.read',
@@ -2298,7 +2298,7 @@ describe('API Token', () => {
     });
 
     test('Updates conditions on token permissions whose conditions have drifted', async () => {
-      const user = { id: 1, roles: [{ code: 'strapi-editor' }] };
+      const user = { id: 1, roles: [{ code: 'kayona-editor' }] };
       const userPermissions = [
         {
           action: 'plugin::cm.read',
@@ -2334,7 +2334,7 @@ describe('API Token', () => {
     });
 
     test('Does nothing when token permissions are already in sync', async () => {
-      const user = { id: 1, roles: [{ code: 'strapi-editor' }] };
+      const user = { id: 1, roles: [{ code: 'kayona-editor' }] };
       const userPermissions = [
         {
           action: 'plugin::cm.read',
@@ -2367,7 +2367,7 @@ describe('API Token', () => {
     });
 
     test('Skips tokens with no adminPermissions', async () => {
-      const user = { id: 1, roles: [{ code: 'strapi-editor' }] };
+      const user = { id: 1, roles: [{ code: 'kayona-editor' }] };
       const tokens = [{ id: 10, adminPermissions: [] }];
 
       const { deleteByIdsMock, updateMock } = buildStrapi({ user, userPermissions: [], tokens });
@@ -2380,7 +2380,7 @@ describe('API Token', () => {
   });
 
   describe('enforceAdminPermissionsCeiling — super-admin condition sanitization', () => {
-    const superAdmin = { id: 1, roles: [{ code: 'strapi-super-admin' }] } as any;
+    const superAdmin = { id: 1, roles: [{ code: 'kayona-super-admin' }] } as any;
 
     const makeStrapWithConditions = (knownConditions: string[]) => {
       global.strapi = {
@@ -2461,7 +2461,7 @@ describe('API Token', () => {
 
   describe('enforceAdminPermissionsCeiling — field ceiling edge case', () => {
     test('rejects when owner is field-restricted but request omits properties.fields', async () => {
-      const ownerUser = { id: 42, roles: [{ code: 'strapi-editor' }] } as any;
+      const ownerUser = { id: 42, roles: [{ code: 'kayona-editor' }] } as any;
       const ownerPermissions = [
         {
           action: 'plugin::content-manager.explorer.update',

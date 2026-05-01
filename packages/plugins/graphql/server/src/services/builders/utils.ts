@@ -39,7 +39,7 @@ export default ({ strapi }: { strapi: Core.Strapi }) => {
       // On non–D&P roots (e.g. User) these args do not version the parent document, but they
       // are required: association resolvers inherit them into nested D&P relations (see
       // builders/resolvers/association.ts + rootQueryArgs). Omitting them broke draft/published
-      // control for populated relations (e.g. github.com/strapi/strapi/issues/25746).
+      // control for populated relations (e.g. github.com/moealjabi/kay/issues/25746).
       //
       // Future direction: add `status` / `hasPublishedVersion` to GraphQL args on nested
       // to-many (and to-one) relation fields when the *target* content type has D&P, instead

@@ -70,7 +70,7 @@ interface AuthContextValue {
  * If the fallback ever did run: it returns [] so consumers (which use .length > 0) treat it
  * as "no permission" for that render—under-permissive. On the next AuthProvider re-render we
  * pass the real function again, so the context updates and the view corrects quickly.
- * @see https://github.com/strapi/strapi/issues/24384
+ * @see https://github.com/moealjabi/kay/issues/24384
  */
 const NOOP_CHECK_USER_HAS_PERMISSIONS: AuthContextValue['checkUserHasPermissions'] = async () => [];
 

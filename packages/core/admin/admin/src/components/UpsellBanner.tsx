@@ -103,7 +103,7 @@ const UpsellBanner = () => {
   const { license } = useLicenseLimits();
 
   const [cachedTrialEndsAt, setCachedTrialEndsAt] = useScopedPersistentState<string | undefined>(
-    'STRAPI_FREE_TRIAL_ENDS_AT',
+    'KAYONA_FREE_TRIAL_ENDS_AT',
     undefined
   );
 
@@ -124,7 +124,7 @@ const UpsellBanner = () => {
   // We show the banner to encourage the user to upgrade (for 7 days after the trial ends)
   const isTrialEndedRecently = Boolean(
     !license?.isTrial &&
-      !window.strapi.isEE &&
+      !window.kayona.isEE &&
       cachedTrialEndsAt &&
       isAfter(new Date(cachedTrialEndsAt), sevenDaysAgo)
   );

@@ -1,27 +1,27 @@
 {
-  "name": "@strapi/core",
+  "name": "@kayona/core",
   "version": "5.44.0",
-  "description": "Core of Strapi",
-  "homepage": "https://strapi.io",
+  "description": "Core of Kayona",
+  "homepage": "https://kayona.io",
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/moealjabi/kay/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strapi/strapi.git",
+    "url": "https://github.com/moealjabi/kay.git",
     "directory": "packages/core/core"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
+    "name": "Kayona Solutions SAS",
+    "email": "hello@kayona.io",
+    "url": "https://kayona.io"
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Kayona Solutions SAS",
+      "email": "hello@kayona.io",
+      "url": "https://kayona.io"
     }
   ],
   "main": "./dist/index.js",
@@ -59,14 +59,14 @@
     "@koa/cors": "5.0.0",
     "@koa/router": "12.0.2",
     "@paralleldrive/cuid2": "2.2.2",
-    "@strapi/admin": "5.44.0",
-    "@strapi/database": "5.44.0",
-    "@strapi/generators": "5.44.0",
-    "@strapi/logger": "5.44.0",
-    "@strapi/permissions": "5.44.0",
-    "@strapi/types": "5.44.0",
-    "@strapi/typescript-utils": "5.44.0",
-    "@strapi/utils": "5.44.0",
+    "@kayona/admin": "5.44.0",
+    "@kayona/database": "5.44.0",
+    "@kayona/generators": "5.44.0",
+    "@kayona/logger": "5.44.0",
+    "@kayona/permissions": "5.44.0",
+    "@kayona/types": "5.44.0",
+    "@kayona/typescript-utils": "5.44.0",
+    "@kayona/utils": "5.44.0",
     "@vercel/stega": "0.1.2",
     "bcryptjs": "2.4.3",
     "boxen": "5.1.2",
@@ -113,7 +113,7 @@
     "zod": "3.25.67"
   },
   "devDependencies": {
-    "@strapi/ts-zen": "^0.2.0",
+    "@kayona/ts-zen": "^0.2.0",
     "@swc/core": "1.13.5",
     "@types/bcryptjs": "2.4.3",
     "@types/configstore": "5.0.1",

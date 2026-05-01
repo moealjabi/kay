@@ -2,7 +2,7 @@ import { Loader } from '@strapi/design-system';
 import { Folder } from '@strapi/icons';
 import { styled } from 'styled-components';
 
-import { STRAPI_CODE_MIME_TYPE } from '../../lib/constants';
+import { KAYONA_CODE_MIME_TYPE } from '../../lib/constants';
 import { Attachment as TAttachment } from '../../lib/types/attachments';
 import { Base64Img } from '../Base64Image';
 import { FullScreenImage } from '../FullScreenImage';
@@ -83,7 +83,7 @@ export const AttachmentPreview = ({
     return <ImageAttachment attachment={attachment} onRemove={onRemove} {...props} />;
   }
 
-  if (attachment.mediaType === STRAPI_CODE_MIME_TYPE) {
+  if (attachment.mediaType === KAYONA_CODE_MIME_TYPE) {
     return <CodeAttachment attachment={attachment} onRemove={onRemove} {...props} />;
   }
 

@@ -5,26 +5,26 @@ import { resolveMiddlewares } from './middleware';
 type MiddlewareConfig = (string | { name?: string; resolve?: string; config?: unknown })[];
 
 const defaultConfig = [
-  'strapi::logger',
-  'strapi::errors',
-  'strapi::security',
-  'strapi::cors',
-  'strapi::poweredBy',
-  'strapi::session',
-  'strapi::query',
-  'strapi::body',
-  'strapi::favicon',
-  'strapi::public',
+  'kayona::logger',
+  'kayona::errors',
+  'kayona::security',
+  'kayona::cors',
+  'kayona::poweredBy',
+  'kayona::session',
+  'kayona::query',
+  'kayona::body',
+  'kayona::favicon',
+  'kayona::public',
 ];
 
 const requiredMiddlewares = [
-  'strapi::errors',
-  'strapi::security',
-  'strapi::cors',
-  'strapi::query',
-  'strapi::body',
-  'strapi::public',
-  'strapi::favicon',
+  'kayona::errors',
+  'kayona::security',
+  'kayona::cors',
+  'kayona::query',
+  'kayona::body',
+  'kayona::public',
+  'kayona::favicon',
 ];
 
 const middlewareConfigSchema = yup.array().of(

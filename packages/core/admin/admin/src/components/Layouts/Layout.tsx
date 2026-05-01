@@ -53,7 +53,7 @@ const OverflowingItem = styled(Box)`
 const RootLayout = ({ sideNav, children, ...restProps }: LayoutProps) => (
   <GridContainer $hasSideNav={Boolean(sideNav)} {...restProps}>
     {sideNav && <SideNavContainer>{sideNav}</SideNavContainer>}
-    <OverflowingItem paddingBottom={RESPONSIVE_DEFAULT_SPACING} data-strapi-main-content>
+    <OverflowingItem paddingBottom={RESPONSIVE_DEFAULT_SPACING} data-kayona-main-content>
       {children}
     </OverflowingItem>
   </GridContainer>

@@ -17,7 +17,7 @@ import { register } from '../register';
 
 const exampleMiddlewaresConfig = [
   {
-    name: 'strapi::security',
+    name: 'kayona::security',
     config: {
       contentSecurityPolicy: {
         useDefaults: true,

@@ -114,7 +114,7 @@ const TASK_CONTENT = [
         id: 'tours.overview.strapiCloud.link',
         defaultMessage: 'Read documentation',
       },
-      to: 'https://docs.strapi.io/cloud/intro',
+      to: 'https://docs.kayona.io/cloud/intro',
     },
     title: {
       id: 'tours.overview.strapiCloud.label',

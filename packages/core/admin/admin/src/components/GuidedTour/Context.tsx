@@ -173,7 +173,7 @@ function reducer(state: State, action: Action): State {
   });
 }
 
-const STORAGE_KEY = 'STRAPI_GUIDED_TOUR';
+const STORAGE_KEY = 'KAYONA_GUIDED_TOUR';
 const GuidedTourContext = ({
   children,
   enabled = true,

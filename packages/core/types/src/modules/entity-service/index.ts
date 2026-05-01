@@ -17,7 +17,7 @@ type WrapAction = Omit<keyof EntityService, 'wrapParams' | 'wrapResult' | 'emitE
 
 /**
  * @deprecated Use the Document Service (`strapi.documents`) instead. Will be removed in the next major version.
- * @see {@link https://docs.strapi.io/dev-docs/api/document-service} Document Service API
+ * @see {@link https://docs.kayona.io/dev-docs/api/document-service} Document Service API
  */
 export interface EntityService {
   /**

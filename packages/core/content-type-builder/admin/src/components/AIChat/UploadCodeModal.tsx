@@ -8,7 +8,7 @@ import { StepModal, useStepModal } from './components/StepModal';
 import { useAttachments } from './hooks/useAttachments';
 import { useCodeUpload } from './hooks/useCodeUpload';
 import { useTranslations } from './hooks/useTranslations';
-import { STRAPI_CODE_MIME_TYPE } from './lib/constants';
+import { KAYONA_CODE_MIME_TYPE } from './lib/constants';
 import { generateId } from './lib/misc';
 import { Attachment } from './lib/types/attachments';
 import { useStrapiChat } from './providers/ChatProvider';
@@ -349,7 +349,7 @@ const CodeConfirmationStep = ({ projectName, isLoading, error }: CodeConfirmatio
             filename: projectName || '',
             url: '',
             type: 'file',
-            mediaType: STRAPI_CODE_MIME_TYPE,
+            mediaType: KAYONA_CODE_MIME_TYPE,
           }}
           error={error}
           minWidth="256px"

@@ -218,7 +218,7 @@ const Form = React.forwardRef<HTMLFormElement, FormProps>(
        * rendered before we try to focus on the first
        */
       const ref = setTimeout(() => {
-        const [firstError] = formRef.current.querySelectorAll('[data-strapi-field-error]');
+        const [firstError] = formRef.current.querySelectorAll('[data-kayona-field-error]');
 
         if (firstError) {
           const errorId = firstError.getAttribute('id');

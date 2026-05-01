@@ -19,7 +19,7 @@ const localStorageMock = {
 const originalLocalStorage = window.localStorage;
 
 describe('NPS survey', () => {
-  const NPS_KEY = 'STRAPI_NPS_SURVEY_SETTINGS';
+  const NPS_KEY = 'KAYONA_NPS_SURVEY_SETTINGS';
 
   beforeAll(() => {
     // @ts-expect-error we're mocking.
@@ -121,7 +121,7 @@ describe('NPS survey', () => {
     console.error = jest.fn();
 
     server.use(
-      rest.post('https://analytics.strapi.io/submit-nps', (req, res, ctx) => {
+      rest.post('https://analytics.kayona.io/submit-nps', (req, res, ctx) => {
         return res.once(ctx.status(500));
       })
     );

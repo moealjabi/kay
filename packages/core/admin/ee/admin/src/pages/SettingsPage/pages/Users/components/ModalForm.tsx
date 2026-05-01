@@ -1,7 +1,7 @@
 import type { FormLayoutInputProps } from '../../../../../../../../admin/src/types/forms';
 
 export const FORM_INITIAL_VALUES = {
-  ...(window.strapi.features.isEnabled(window.strapi.features.SSO)
+  ...(window.kayona.features.isEnabled(window.kayona.features.SSO)
     ? {
         useSSORegistration: true,
       }
@@ -9,7 +9,7 @@ export const FORM_INITIAL_VALUES = {
 };
 
 export const ROLE_LAYOUT = [
-  ...(window.strapi.features.isEnabled(window.strapi.features.SSO)
+  ...(window.kayona.features.isEnabled(window.kayona.features.SSO)
     ? [
         [
           {

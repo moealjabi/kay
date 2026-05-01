@@ -2,9 +2,9 @@
 declare global {
   interface Window {
     __strapi_previewCleanup?: () => void;
-    STRAPI_HIGHLIGHT_HOVER_COLOR?: string;
-    STRAPI_HIGHLIGHT_ACTIVE_COLOR?: string;
-    STRAPI_DISABLE_STEGA_DECODING?: boolean;
+    KAYONA_HIGHLIGHT_HOVER_COLOR?: string;
+    KAYONA_HIGHLIGHT_ACTIVE_COLOR?: string;
+    KAYONA_DISABLE_STEGA_DECODING?: boolean;
   }
 }
 
@@ -31,21 +31,21 @@ const previewScript = (config: PreviewScriptConfig) => {
    * Params
    * ---------------------------------------------------------------------------------------------*/
   const HIGHLIGHT_PADDING = 2; // in pixels
-  const HIGHLIGHT_HOVER_COLOR = window.STRAPI_HIGHLIGHT_HOVER_COLOR ?? colors.highlightHoverColor;
+  const HIGHLIGHT_HOVER_COLOR = window.KAYONA_HIGHLIGHT_HOVER_COLOR ?? colors.highlightHoverColor;
   const HIGHLIGHT_ACTIVE_COLOR =
-    window.STRAPI_HIGHLIGHT_ACTIVE_COLOR ?? colors.highlightActiveColor;
+    window.KAYONA_HIGHLIGHT_ACTIVE_COLOR ?? colors.highlightActiveColor;
   const HIGHLIGHT_STYLES_ID = 'strapi-preview-highlight-styles';
   const DOUBLE_CLICK_TIMEOUT = 300; // milliseconds to wait for potential double-click
 
-  const DISABLE_STEGA_DECODING = window.STRAPI_DISABLE_STEGA_DECODING ?? false;
-  const SOURCE_ATTRIBUTE = 'data-strapi-source';
+  const DISABLE_STEGA_DECODING = window.KAYONA_DISABLE_STEGA_DECODING ?? false;
+  const SOURCE_ATTRIBUTE = 'data-kayona-source';
   const OVERLAY_ID = 'strapi-preview-overlay';
   const INTERNAL_EVENTS = {
-    STRAPI_FIELD_FOCUS: 'strapiFieldFocus',
-    STRAPI_FIELD_BLUR: 'strapiFieldBlur',
-    STRAPI_FIELD_CHANGE: 'strapiFieldChange',
-    STRAPI_FIELD_FOCUS_INTENT: 'strapiFieldFocusIntent',
-    STRAPI_FIELD_SINGLE_CLICK_HINT: 'strapiFieldSingleClickHint',
+    KAYONA_FIELD_FOCUS: 'strapiFieldFocus',
+    KAYONA_FIELD_BLUR: 'strapiFieldBlur',
+    KAYONA_FIELD_CHANGE: 'strapiFieldChange',
+    KAYONA_FIELD_FOCUS_INTENT: 'strapiFieldFocusIntent',
+    KAYONA_FIELD_SINGLE_CLICK_HINT: 'strapiFieldSingleClickHint',
   } as const;
 
   /**
@@ -265,7 +265,7 @@ const previewScript = (config: PreviewScriptConfig) => {
           pendingClicks.delete(element);
 
           // Send single-click hint notification
-          sendMessage(INTERNAL_EVENTS.STRAPI_FIELD_SINGLE_CLICK_HINT, null);
+          sendMessage(INTERNAL_EVENTS.KAYONA_FIELD_SINGLE_CLICK_HINT, null);
 
           // Re-trigger the click on the underlying element after the double-click timeout
           // Create a new event to dispatch with a marker to prevent re-handling
@@ -305,7 +305,7 @@ const previewScript = (config: PreviewScriptConfig) => {
         const sourceAttribute = element.getAttribute(SOURCE_ATTRIBUTE);
         if (sourceAttribute) {
           const rect = element.getBoundingClientRect();
-          sendMessage(INTERNAL_EVENTS.STRAPI_FIELD_FOCUS_INTENT, {
+          sendMessage(INTERNAL_EVENTS.KAYONA_FIELD_FOCUS_INTENT, {
             path: sourceAttribute,
             position: {
               top: rect.top,
@@ -534,7 +534,7 @@ const previewScript = (config: PreviewScriptConfig) => {
       if (!event.data?.type) return;
 
       // The user typed in an input, reflect the change in the preview
-      if (event.data.type === INTERNAL_EVENTS.STRAPI_FIELD_CHANGE) {
+      if (event.data.type === INTERNAL_EVENTS.KAYONA_FIELD_CHANGE) {
         const { field, value } = event.data.payload;
         if (!field) return;
 
@@ -550,7 +550,7 @@ const previewScript = (config: PreviewScriptConfig) => {
       }
 
       // The user focused a new input, update the highlights in the preview
-      if (event.data.type === INTERNAL_EVENTS.STRAPI_FIELD_FOCUS) {
+      if (event.data.type === INTERNAL_EVENTS.KAYONA_FIELD_FOCUS) {
         const { field } = event.data.payload;
         if (!field) return;
 
@@ -577,7 +577,7 @@ const previewScript = (config: PreviewScriptConfig) => {
       }
 
       // The user is no longer focusing an input, remove the highlights
-      if (event.data.type === INTERNAL_EVENTS.STRAPI_FIELD_BLUR) {
+      if (event.data.type === INTERNAL_EVENTS.KAYONA_FIELD_BLUR) {
         const { field } = event.data.payload;
         if (field !== highlightManager.getFocusedField()) return;
 

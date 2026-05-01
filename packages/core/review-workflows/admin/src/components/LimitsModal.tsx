@@ -7,8 +7,8 @@ import { styled } from 'styled-components';
 
 import balloonImageSrc from '../assets/balloon.png';
 
-const CTA_LEARN_MORE_HREF = 'https://strapi.io/pricing-cloud';
-const CTA_SALES_HREF = 'https://strapi.io/contact-sales';
+const CTA_LEARN_MORE_HREF = 'https://kayona.io/pricing-cloud';
+const CTA_SALES_HREF = 'https://kayona.io/contact-sales';
 
 const Title: React.FC<React.PropsWithChildren> = ({ children }) => {
   return <Modal.Title variant="alpha">{children}</Modal.Title>;

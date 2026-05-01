@@ -117,7 +117,7 @@ const EditPage = () => {
         return;
       }
 
-      if (role.code !== 'strapi-super-admin' && permissionsToSend) {
+      if (role.code !== 'kayona-super-admin' && permissionsToSend) {
         const updateRes = await updateRolePermissions({
           id: res.data.id,
           permissions: permissionsToSend,
@@ -157,7 +157,7 @@ const EditPage = () => {
     }
   };
 
-  const isFormDisabled = !isRoleLoading && role.code === 'strapi-super-admin';
+  const isFormDisabled = !isRoleLoading && role.code === 'kayona-super-admin';
 
   if (isLoadingPermissionsLayout || isRoleLoading || isLoadingPermissions || !permissionsLayout) {
     return <Page.Loading />;
@@ -192,7 +192,7 @@ const EditPage = () => {
                 <Button
                   type="submit"
                   startIcon={<Check />}
-                  disabled={role.code === 'strapi-super-admin'}
+                  disabled={role.code === 'kayona-super-admin'}
                   loading={isSubmitting}
                   fullWidth
                 >

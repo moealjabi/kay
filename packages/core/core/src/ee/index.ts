@@ -78,12 +78,12 @@ const init = (licenseDir: string, logger?: Logger) => {
   initialized = true;
   ee.logger = logger;
 
-  if (process.env.STRAPI_DISABLE_EE?.toLowerCase() === 'true') {
+  if (process.env.KAYONA_DISABLE_EE?.toLowerCase() === 'true') {
     return;
   }
 
   try {
-    const license = process.env.STRAPI_LICENSE || readLicense(licenseDir);
+    const license = process.env.KAYONA_LICENSE || readLicense(licenseDir);
 
     if (license) {
       ee.licenseInfo = verifyLicense(license);
@@ -109,7 +109,7 @@ const onlineUpdate = async ({ strapi }: { strapi: Core.Strapi }) => {
 
   try {
     const storedInfo = await strapi.db
-      ?.queryBuilder('strapi::core-store')
+      ?.queryBuilder('kayona::core-store')
       .where({ key: 'ee_information' })
       .select('value')
       .first()
@@ -178,7 +178,7 @@ const onlineUpdate = async ({ strapi }: { strapi: Core.Strapi }) => {
 
     if (shouldContactRegistry) {
       result.license = license ?? null;
-      const query = strapi.db.queryBuilder('strapi::core-store').transacting(transaction);
+      const query = strapi.db.queryBuilder('kayona::core-store').transacting(transaction);
 
       if (!storedInfo) {
         query.insert({ key: 'ee_information', value: JSON.stringify(result) });
@@ -214,7 +214,7 @@ const checkLicense = async ({ strapi }: { strapi: Core.Strapi }) => {
   const shouldStayOffline =
     ee.licenseInfo.type === 'gold' &&
     // This env variable support is temporarily used to ease the migration between online vs offline
-    process.env.STRAPI_DISABLE_LICENSE_PING?.toLowerCase() === 'true';
+    process.env.KAYONA_DISABLE_LICENSE_PING?.toLowerCase() === 'true';
 
   if (!shouldStayOffline) {
     await onlineUpdate({ strapi });

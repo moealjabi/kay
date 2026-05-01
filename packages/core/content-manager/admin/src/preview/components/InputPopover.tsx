@@ -63,11 +63,11 @@ const InputPopover = ({ documentResponse }: { documentResponse: ReturnType<UseDo
         }
       }
 
-      if (event.data?.type === INTERNAL_EVENTS.STRAPI_FIELD_FOCUS_INTENT) {
+      if (event.data?.type === INTERNAL_EVENTS.KAYONA_FIELD_FOCUS_INTENT) {
         const fieldMetaData = parseFieldMetaData(event.data.payload.path);
 
         if (!fieldMetaData) {
-          const { type, message } = PREVIEW_ERROR_MESSAGES.INCOMPLETE_STRAPI_SOURCE;
+          const { type, message } = PREVIEW_ERROR_MESSAGES.INCOMPLETE_KAYONA_SOURCE;
           toggleNotification({ type, message: formatMessage(message) });
           return;
         }
@@ -103,7 +103,7 @@ const InputPopover = ({ documentResponse }: { documentResponse: ReturnType<UseDo
         }
       }
 
-      if (event.data?.type === INTERNAL_EVENTS.STRAPI_FIELD_SINGLE_CLICK_HINT) {
+      if (event.data?.type === INTERNAL_EVENTS.KAYONA_FIELD_SINGLE_CLICK_HINT) {
         toggleNotification({
           type: 'info',
           message: formatMessage({

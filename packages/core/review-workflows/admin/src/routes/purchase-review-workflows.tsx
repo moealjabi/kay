@@ -95,7 +95,7 @@ const PurchaseReviewWorkflows = () => {
                 <Flex gap={2} marginTop={7}>
                   <LinkButton
                     variant="default"
-                    href="https://strapi.io/pricing-self-hosted?utm_campaign=In-Product-CTA&utm_source=Review%20Workflows"
+                    href="https://kayona.io/pricing-self-hosted?utm_campaign=In-Product-CTA&utm_source=Review%20Workflows"
                   >
                     {formatMessage({
                       id: 'Settings.page.purchase.upgrade.cta',
@@ -105,7 +105,7 @@ const PurchaseReviewWorkflows = () => {
                   <LinkButton
                     variant="tertiary"
                     endIcon={<ExternalLink />}
-                    href="https://strapi.io/features/review-workflow?utm_campaign=In-Product-CTA&utm_source=Review%20Workflows"
+                    href="https://kayona.io/features/review-workflow?utm_campaign=In-Product-CTA&utm_source=Review%20Workflows"
                   >
                     {formatMessage({
                       id: 'Settings.page.purchase.learn-more.cta',

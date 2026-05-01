@@ -9,7 +9,7 @@ export default ({ strapi }: Context) => {
    * @return {boolean}
    */
   const isStrapiScalar = (attribute: Schema.Attribute.AnyAttribute) => {
-    return strapi.plugin('graphql').service('constants').STRAPI_SCALARS.includes(attribute.type);
+    return strapi.plugin('graphql').service('constants').KAYONA_SCALARS.includes(attribute.type);
   };
 
   /**

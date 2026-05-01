@@ -257,7 +257,7 @@
   "preview.info.single-click-hint": "Doppelklick zum Bearbeiten",
   "preview.error.invalid-field-path": "Dieses Feld konnte im aktuellen Dokument nicht gefunden werden",
   "preview.error.relations-not-handled": "Inline-Bearbeitung für Relationen wird derzeit nicht unterstützt.",
-  "preview.error.incomplete-strapi-source": "Diesem Feld fehlen einige erforderliche Vorschau-Informationen",
+  "preview.error.incomplete-kayona-source": "Diesem Feld fehlen einige erforderliche Vorschau-Informationen",
   "preview.error.different-document": "Dieses Feld stammt aus einem anderen Dokument",
   "relation.create": "Relation erstellen",
   "relation.add": "Relation hinzufügen oder erstellen",

@@ -107,11 +107,11 @@ const ListViewPage = () => {
 
   const persistentQueryConfigs: PersistentQueryConfig = React.useMemo(
     () => ({
-      [`STRAPI_LIST_VIEW_SETTINGS:${model}`]: {
+      [`KAYONA_LIST_VIEW_SETTINGS:${model}`]: {
         paths: ['sort', 'filters', 'pageSize'],
         scoped: true,
       },
-      STRAPI_LOCALE: {
+      KAYONA_LOCALE: {
         paths: ['plugins.i18n.locale'],
         scoped: false,
       },
@@ -121,7 +121,7 @@ const ListViewPage = () => {
   const { isHydrated } = usePersistentPartialQueryParams(persistentQueryConfigs);
 
   const [displayedHeaderNames, setDisplayedHeaderNames] = useScopedPersistentState<string[] | null>(
-    `STRAPI_LIST_VIEW_DISPLAYED_HEADERS:${model}`,
+    `KAYONA_LIST_VIEW_DISPLAYED_HEADERS:${model}`,
     null
   );
 

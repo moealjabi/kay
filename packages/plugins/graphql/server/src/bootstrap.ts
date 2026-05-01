@@ -129,7 +129,7 @@ export async function bootstrap({ strapi }: { strapi: Core.Strapi }) {
    * In order to do that we are currently storing the arguments in context.
    * There is likely a better solution, but for now this is the simplest fix we could find.
    *
-   * @see https://github.com/strapi/strapi/issues/23524
+   * @see https://github.com/moealjabi/kay/issues/23524
    */
   const pluginAddRootQueryArgs: ApolloServerPlugin<StrapiGraphQLContext> = {
     async requestDidStart() {

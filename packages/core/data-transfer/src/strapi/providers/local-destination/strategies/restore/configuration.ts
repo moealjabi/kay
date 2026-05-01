@@ -9,7 +9,7 @@ const omitInvalidCreationAttributes = omit(['id']);
 
 const restoreCoreStore = async <T extends { value: unknown }>(strapi: Core.Strapi, values: T) => {
   const data = omitInvalidCreationAttributes(values);
-  return strapi.db.query('strapi::core-store').create({
+  return strapi.db.query('kayona::core-store').create({
     data: {
       ...data,
       value: JSON.stringify(data.value),
@@ -19,7 +19,7 @@ const restoreCoreStore = async <T extends { value: unknown }>(strapi: Core.Strap
 
 const restoreWebhooks = async <T extends { value: unknown }>(strapi: Core.Strapi, values: T) => {
   const data = omitInvalidCreationAttributes(values);
-  return strapi.db.query('strapi::webhook').create({ data });
+  return strapi.db.query('kayona::webhook').create({ data });
 };
 
 export const restoreConfigs = async (strapi: Core.Strapi, config: IConfiguration) => {

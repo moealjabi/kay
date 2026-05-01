@@ -26,7 +26,7 @@ const admin: Plugin.Config.AdminInput = {
      */
     app.createHook('ContentReleases/pages/ReleaseDetails/add-locale-in-releases');
 
-    if (window.strapi.features.isEnabled('cms-content-releases')) {
+    if (window.kayona.features.isEnabled('cms-content-releases')) {
       app.addMenuLink({
         to: `plugins/${pluginId}`,
         icon: PaperPlane,
@@ -115,8 +115,8 @@ const admin: Plugin.Config.AdminInput = {
         },
       ]);
     } else if (
-      !window.strapi.features.isEnabled('cms-content-releases') &&
-      window.strapi?.flags?.promoteEE
+      !window.kayona.features.isEnabled('cms-content-releases') &&
+      window.kayona?.flags?.promoteEE
     ) {
       app.addSettingsLink('global', {
         id: pluginId,

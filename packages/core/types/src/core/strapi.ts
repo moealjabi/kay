@@ -24,14 +24,14 @@ export interface Strapi extends Container {
   entityValidator: Modules.EntityValidator.EntityValidator;
   /**
    * @deprecated Use the Document Service (`strapi.documents`) instead. Will be removed in the next major version.
-   * @see {@link https://docs.strapi.io/dev-docs/api/document-service} Document Service API
+   * @see {@link https://docs.kayona.io/dev-docs/api/document-service} Document Service API
    */
   entityService: Modules.EntityService.EntityService;
   /**
    * The Document Service is the primary API to interact with content in Strapi v5+.
    * It replaces the deprecated `entityService` and provides full support for Draft & Publish and internationalization.
    *
-   * @see {@link https://docs.strapi.io/dev-docs/api/document-service} Document Service API
+   * @see {@link https://docs.kayona.io/dev-docs/api/document-service} Document Service API
    */
   documents: Modules.Documents.Service;
   telemetry: Modules.Metrics.TelemetryService;

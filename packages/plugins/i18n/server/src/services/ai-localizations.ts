@@ -139,7 +139,7 @@ const mergeUnsupportedFields = async (
 
 const createAILocalizationsService = ({ strapi }: { strapi: Core.Strapi }) => {
   // TODO: add a helper function to get the AI server URL
-  const aiServerUrl = process.env.STRAPI_AI_URL || 'https://strapi-ai.apps.strapi.io';
+  const aiServerUrl = process.env.KAYONA_AI_URL || 'https://strapi-ai.apps.strapi.io';
   const aiLocalizationJobsService = getService('ai-localization-jobs');
 
   return {

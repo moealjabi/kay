@@ -245,7 +245,7 @@ const createRolesIfNoneExist = async () => {
   // create 3 roles
   const superAdminRole = await create({
     name: 'Super Admin',
-    code: 'strapi-super-admin',
+    code: 'kayona-super-admin',
     description: 'Super Admins can access and manage all features and settings.',
   });
 
@@ -253,13 +253,13 @@ const createRolesIfNoneExist = async () => {
 
   const editorRole = await create({
     name: 'Editor',
-    code: 'strapi-editor',
+    code: 'kayona-editor',
     description: 'Editors can manage and publish contents including those of other users.',
   });
 
   const authorRole = await create({
     name: 'Author',
-    code: 'strapi-author',
+    code: 'kayona-author',
     description: 'Authors can manage the content they have created.',
   });
 

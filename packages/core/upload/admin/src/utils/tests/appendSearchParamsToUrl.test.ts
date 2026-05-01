@@ -49,13 +49,13 @@ describe('appendSearchParamsToUrl', () => {
        * with the backendURL from the strapi window object, here we overwrite it
        * just so it's clear what the expected output is.
        */
-      originalBackendURL = window.strapi.backendURL;
-      window.strapi.backendURL = 'https://appending-search-params.com';
+      originalBackendURL = window.kayona.backendURL;
+      window.kayona.backendURL = 'https://appending-search-params.com';
     });
 
     afterAll(() => {
       if (originalBackendURL) {
-        window.strapi.backendURL = originalBackendURL;
+        window.kayona.backendURL = originalBackendURL;
       }
     });
 

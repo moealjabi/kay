@@ -1,27 +1,27 @@
 {
-  "name": "@strapi/content-releases",
+  "name": "@kayona/content-releases",
   "version": "5.44.0",
-  "description": "Strapi plugin for organizing and releasing content",
-  "homepage": "https://strapi.io",
+  "description": "Kayona plugin for organizing and releasing content",
+  "homepage": "https://kayona.io",
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/moealjabi/kay/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strapi/strapi.git",
+    "url": "https://github.com/moealjabi/kay.git",
     "directory": "packages/core/content-releases"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
+    "name": "Kayona Solutions SAS",
+    "email": "hello@kayona.io",
+    "url": "https://kayona.io"
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Kayona Solutions SAS",
+      "email": "hello@kayona.io",
+      "url": "https://kayona.io"
     }
   ],
   "exports": {
@@ -64,11 +64,11 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.9.7",
-    "@strapi/database": "5.44.0",
-    "@strapi/design-system": "2.2.0",
-    "@strapi/icons": "2.2.0",
-    "@strapi/types": "5.44.0",
-    "@strapi/utils": "5.44.0",
+    "@kayona/database": "5.44.0",
+    "@kayona/design-system": "2.2.0",
+    "@kayona/icons": "2.2.0",
+    "@kayona/types": "5.44.0",
+    "@kayona/utils": "5.44.0",
     "date-fns": "2.30.0",
     "date-fns-tz": "2.0.1",
     "formik": "2.4.5",
@@ -79,9 +79,9 @@
     "yup": "0.32.9"
   },
   "devDependencies": {
-    "@strapi/admin": "5.44.0",
-    "@strapi/admin-test-utils": "5.44.0",
-    "@strapi/content-manager": "5.44.0",
+    "@kayona/admin": "5.44.0",
+    "@kayona/admin-test-utils": "5.44.0",
+    "@kayona/content-manager": "5.44.0",
     "@testing-library/dom": "10.4.1",
     "@testing-library/react": "16.3.0",
     "@testing-library/user-event": "14.6.1",
@@ -96,8 +96,8 @@
     "typescript": "5.4.5"
   },
   "peerDependencies": {
-    "@strapi/admin": "^5.0.0",
-    "@strapi/content-manager": "^5.0.0",
+    "@kayona/admin": "^5.0.0",
+    "@kayona/content-manager": "^5.0.0",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",
     "react-router-dom": "^6.30.3",

@@ -10,7 +10,7 @@ import { RouterProvider } from 'react-router-dom';
 
 import { ADMIN_PERMISSIONS_EE, AUDIT_LOGS_DEFAULT_PAGE_SIZE } from '../../ee/admin/src/constants';
 
-import Logo from './assets/images/logo-strapi-2022.svg';
+import Logo from './assets/images/logo-kayona.svg';
 import { ADMIN_PERMISSIONS_CE, HOOKS } from './constants';
 import { CustomFields } from './core/apis/CustomFields';
 import { Plugin, PluginConfig } from './core/apis/Plugin';
@@ -271,7 +271,7 @@ class StrapiApp {
 
       if (!darkTheme && !lightTheme) {
         console.warn(
-          `[deprecated] In future versions, Strapi will stop supporting this theme customization syntax. The theme configuration accepts a light and a dark key to customize each theme separately. See https://docs.strapi.io/developer-docs/latest/development/admin-customization.html#theme-extension.`.trim()
+          `[deprecated] In future versions, Strapi will stop supporting this theme customization syntax. The theme configuration accepts a light and a dark key to customize each theme separately. See https://docs.kayona.io/developer-docs/latest/development/admin-customization.html#theme-extension.`.trim()
         );
         merge(this.configurations.themes.light, customConfig.theme);
       }
@@ -345,7 +345,7 @@ class StrapiApp {
         },
         pluginId: 'admin',
         id: 'key-statistics',
-        roles: ['strapi-super-admin'],
+        roles: ['kayona-super-admin'],
       },
       {
         icon: Cloud,
@@ -371,7 +371,7 @@ class StrapiApp {
     }
 
     // Register Audit Logs widget at the end of the widgets array
-    if (window.strapi.features.isEnabled(window.strapi.features.AUDIT_LOGS)) {
+    if (window.kayona.features.isEnabled(window.kayona.features.AUDIT_LOGS)) {
       this.widgets.register([
         {
           icon: Clock,

@@ -89,7 +89,7 @@ async function uploadFile(file, name) {
       files: file,
       data: {
         fileInfo: {
-          alternativeText: `An image uploaded to Strapi called ${name}`,
+          alternativeText: `An image uploaded to Kayona called ${name}`,
           caption: name,
           name,
         },
@@ -100,7 +100,7 @@ async function uploadFile(file, name) {
 // Create an entry and attach files if there are any
 async function createEntry({ model, entry }) {
   try {
-    // Actually create the entry in Strapi
+    // Actually create the entry in Kayona
     await strapi.documents(`api::${model}.${model}`).create({
       data: entry,
     });
@@ -115,7 +115,7 @@ async function checkFileExistsBeforeUpload(files) {
   const filesCopy = [...files];
 
   for (const fileName of filesCopy) {
-    // Check if the file already exists in Strapi
+    // Check if the file already exists in Kayona
     const fileWhereName = await strapi.query('plugin::upload.file').findOne({
       where: {
         name: fileName.replace(/\..*$/, ''),
@@ -149,7 +149,7 @@ async function updateBlocks(blocks) {
       blockCopy.file = uploadedFiles;
       updatedBlocks.push(blockCopy);
     } else if (block.__component === 'shared.slider') {
-      // Get files already uploaded to Strapi or upload new files
+      // Get files already uploaded to Kayona or upload new files
       const existingAndUploadedFiles = await checkFileExistsBeforeUpload(block.files);
       // Copy the block to not mutate directly
       const blockCopy = { ...block };
@@ -255,10 +255,10 @@ async function importSeedData() {
 }
 
 async function main() {
-  const { createStrapi, compileStrapi } = require('@strapi/strapi');
+  const { createKayona, compileKayona } = require('@strapi/strapi');
 
-  const appContext = await compileStrapi();
-  const app = await createStrapi(appContext).load();
+  const appContext = await compileKayona();
+  const app = await createKayona(appContext).load();
 
   app.log.level = 'error';
 

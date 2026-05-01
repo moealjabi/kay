@@ -170,7 +170,7 @@ const StyledToggleItem = styled(ToggleGroup.Item)`
 `;
 
 const HeaderWrapper = styled(Box)`
-  [data-strapi-header] {
+  [data-kayona-header] {
     background: ${({ theme }) => theme.colors.neutral0};
 
     h1 {

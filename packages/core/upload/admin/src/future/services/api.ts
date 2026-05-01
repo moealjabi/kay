@@ -157,7 +157,7 @@ const fetchUploadStream = async ({
   formData: FormData;
   signal: AbortSignal;
 }): Promise<Response> => {
-  const backendURL = window.strapi.backendURL;
+  const backendURL = window.kayona.backendURL;
   const headers: Record<string, string> = {};
   if (token) {
     headers.Authorization = `Bearer ${token}`;
@@ -186,7 +186,7 @@ const fetchUrlUploadStream = async ({
   folderId: number | null;
   signal: AbortSignal;
 }): Promise<Response> => {
-  const backendURL = window.strapi.backendURL;
+  const backendURL = window.kayona.backendURL;
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
   };

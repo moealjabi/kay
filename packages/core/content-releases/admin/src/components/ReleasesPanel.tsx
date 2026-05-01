@@ -53,7 +53,7 @@ const Panel: PanelComponent = ({
   };
 
   // Project is not EE or contentType does not have draftAndPublish enabled
-  if (!window.strapi.isEE || !options?.draftAndPublish || !canRead) {
+  if (!window.kayona.isEE || !options?.draftAndPublish || !canRead) {
     return null;
   }
 

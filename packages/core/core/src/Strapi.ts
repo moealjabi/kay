@@ -347,7 +347,7 @@ class Strapi extends Container implements Core.Strapi {
 
     this.startupLogger.logStartupMessage({ isInitialized });
 
-    this.log.info('Strapi started successfully');
+    this.log.info('Kayona started successfully');
     this.sendStartupTelemetry();
     this.openAdmin({ isInitialized });
   }
@@ -442,13 +442,13 @@ class Strapi extends Container implements Core.Strapi {
     let oldContentTypes;
     if (await this.db.getSchemaConnection().hasTable(coreStoreModel.tableName)) {
       oldContentTypes = await this.store.get({
-        type: 'strapi',
+        type: 'kayona',
         name: 'content_types',
         key: 'schema',
       });
     }
 
-    await this.hook('strapi::content-types.beforeSync').call({
+    await this.hook('kayona::content-types.beforeSync').call({
       oldContentTypes,
       contentTypes: this.contentTypes,
     });
@@ -465,14 +465,14 @@ class Strapi extends Container implements Core.Strapi {
     }
 
     const alreadyRanComponentRepair = await this.store.get({
-      type: 'strapi',
+      type: 'kayona',
       key: 'unidirectional-join-table-repair-ran',
     });
 
     if (!alreadyRanComponentRepair) {
       await this.db.repair.processUnidirectionalJoinTables(cleanComponentJoinTable);
       await this.store.set({
-        type: 'strapi',
+        type: 'kayona',
         key: 'unidirectional-join-table-repair-ran',
         value: true,
       });
@@ -482,13 +482,13 @@ class Strapi extends Container implements Core.Strapi {
       await utils.ee.checkLicense({ strapi: this });
     }
 
-    await this.hook('strapi::content-types.afterSync').call({
+    await this.hook('kayona::content-types.afterSync').call({
       oldContentTypes,
       contentTypes: this.contentTypes,
     });
 
     await this.store.set({
-      type: 'strapi',
+      type: 'kayona',
       name: 'content_types',
       key: 'schema',
       value: this.contentTypes,
@@ -533,7 +533,7 @@ class Strapi extends Container implements Core.Strapi {
   }
 
   async destroy() {
-    this.log.info('Shutting down Strapi');
+    this.log.info('Shutting down Kayona');
     await this.runPluginsLifecycles(utils.LIFECYCLES.DESTROY);
 
     for (const provider of providers) {
@@ -553,7 +553,7 @@ class Strapi extends Container implements Core.Strapi {
     // @ts-expect-error: Allow clean delete of global.strapi to allow re-instanciation
     delete global.strapi;
 
-    this.log.info('Strapi has been shut down');
+    this.log.info('Kayona has been shut down');
   }
 
   async runPluginsLifecycles(lifecycleName: 'register' | 'bootstrap' | 'destroy') {

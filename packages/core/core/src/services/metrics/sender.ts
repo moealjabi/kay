@@ -61,7 +61,7 @@ export default (strapi: Core.Strapi): Sender => {
     useTypescriptOnServer: tsUtils.isUsingTypeScriptSync(serverRootPath),
     useTypescriptOnAdmin: tsUtils.isUsingTypeScriptSync(adminRootPath),
     projectId: uuid,
-    isHostedOnStrapiCloud: env('STRAPI_HOSTING', null) === 'strapi.cloud',
+    isHostedOnStrapiCloud: env('KAYONA_HOSTING', null) === 'strapi.cloud',
   };
 
   addPackageJsonStrapiMetadata(anonymousGroupProperties, strapi);
@@ -96,7 +96,7 @@ export default (strapi: Core.Strapi): Sender => {
     };
 
     try {
-      const analyticsUrl = env('STRAPI_ANALYTICS_URL', 'https://analytics.strapi.io');
+      const analyticsUrl = env('KAYONA_ANALYTICS_URL', 'https://analytics.kayona.io');
       const res = await strapi.fetch(`${analyticsUrl}/api/v2/track`, reqParams);
       return res.ok;
     } catch (err) {

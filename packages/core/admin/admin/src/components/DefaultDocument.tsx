@@ -3,7 +3,7 @@ import { NoJavascript } from './NoJavascript';
 const globalStyles = `
   html,
   body,
-  #strapi {
+  #kayona {
     height: 100%;
   }
   body {

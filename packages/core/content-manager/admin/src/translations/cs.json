@@ -282,7 +282,7 @@
   "preview.info.single-click-hint": "Dvojklik pro úpravu",
   "preview.error.invalid-field-path": "Toto pole nebylo možné v aktuálním dokumentu najít",
   "preview.error.relations-not-handled": "Inline úpravy relací nejsou momentálně podporovány.",
-  "preview.error.incomplete-strapi-source": "Tomuto poli chybí některé povinné informace pro náhled",
+  "preview.error.incomplete-kayona-source": "Tomuto poli chybí některé povinné informace pro náhled",
   "preview.error.different-document": "Toto pole pochází z jiného dokumentu",
   "relation.create": "Vytvořit relaci",
   "relation.add": "Přidat nebo vytvořit relaci",

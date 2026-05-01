@@ -25,8 +25,8 @@ const STORAGE_KEYS = {
   STATUS: 'isLoggedIn',
 };
 
-const THEME_LOCAL_STORAGE_KEY = 'STRAPI_THEME';
-const LANGUAGE_LOCAL_STORAGE_KEY = 'strapi-admin-language';
+const THEME_LOCAL_STORAGE_KEY = 'KAYONA_THEME';
+const LANGUAGE_LOCAL_STORAGE_KEY = 'kayona-admin-language';
 
 export const getStoredToken = (): string | null => {
   const fromLocalStorage = localStorage.getItem(STORAGE_KEYS.TOKEN);

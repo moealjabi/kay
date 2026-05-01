@@ -27,8 +27,8 @@ jest.mock('../../../../../src/services/admin', () => ({
 
 describe('FreeTrialEndedModal', () => {
   beforeEach(() => {
-    localStorage.removeItem('STRAPI_FREE_TRIAL_ENDS_AT:test-uuid');
-    localStorage.removeItem('STRAPI_FREE_TRIAL_ENDED_MODAL:test-uuid');
+    localStorage.removeItem('KAYONA_FREE_TRIAL_ENDS_AT:test-uuid');
+    localStorage.removeItem('KAYONA_FREE_TRIAL_ENDED_MODAL:test-uuid');
   });
 
   beforeAll(() => {
@@ -41,7 +41,7 @@ describe('FreeTrialEndedModal', () => {
   });
 
   it('should render when trial ended less than 7 days ago and modal never appeared before', async () => {
-    localStorage.setItem('STRAPI_FREE_TRIAL_ENDS_AT:test-uuid', '2025-05-21T09:50:00.000Z');
+    localStorage.setItem('KAYONA_FREE_TRIAL_ENDS_AT:test-uuid', '2025-05-21T09:50:00.000Z');
 
     // @ts-expect-error – mock
     useLicenseLimits.mockImplementationOnce(() => ({
@@ -58,8 +58,8 @@ describe('FreeTrialEndedModal', () => {
   });
 
   it('should not render when trial ended less than 7 days ago but modal already appeared before', async () => {
-    localStorage.setItem('STRAPI_FREE_TRIAL_ENDS_AT:test-uuid', '2025-05-21T09:50:00.000Z');
-    localStorage.setItem('STRAPI_FREE_TRIAL_ENDED_MODAL:test-uuid', 'true');
+    localStorage.setItem('KAYONA_FREE_TRIAL_ENDS_AT:test-uuid', '2025-05-21T09:50:00.000Z');
+    localStorage.setItem('KAYONA_FREE_TRIAL_ENDED_MODAL:test-uuid', 'true');
 
     // @ts-expect-error – mock
     useLicenseLimits.mockImplementationOnce(() => ({

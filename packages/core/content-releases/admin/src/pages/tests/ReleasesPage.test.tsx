@@ -25,13 +25,13 @@ jest.mock('@strapi/admin/strapi-admin', () => ({
 
 describe('Releases home page', () => {
   beforeAll(() => {
-    window.strapi.future = {
+    window.kayona.future = {
       isEnabled: () => true,
     };
   });
 
   afterAll(() => {
-    window.strapi.future = {
+    window.kayona.future = {
       isEnabled: () => false,
     };
   });

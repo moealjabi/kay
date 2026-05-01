@@ -543,7 +543,7 @@ const PermissionsField = ({
 
   // Super admins always have permissions to do everything and therefore
   // there is no point for this role to show up in the role combobox
-  const filteredRoles = roles?.filter((role) => role.code !== 'strapi-super-admin') ?? [];
+  const filteredRoles = roles?.filter((role) => role.code !== 'kayona-super-admin') ?? [];
 
   React.useEffect(() => {
     if (

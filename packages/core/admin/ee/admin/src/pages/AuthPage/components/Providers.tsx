@@ -17,7 +17,7 @@ const Providers = () => {
   const navigate = useNavigate();
   const { formatMessage } = useIntl();
   const { isLoading, data: providers = [] } = useGetProvidersQuery(undefined, {
-    skip: !window.strapi.features.isEnabled(window.strapi.features.SSO),
+    skip: !window.kayona.features.isEnabled(window.kayona.features.SSO),
   });
 
   const handleClick = () => {
@@ -25,7 +25,7 @@ const Providers = () => {
   };
 
   if (
-    !window.strapi.features.isEnabled(window.strapi.features.SSO) ||
+    !window.kayona.features.isEnabled(window.kayona.features.SSO) ||
     (!isLoading && providers.length === 0)
   ) {
     return <Navigate to="/auth/login" />;

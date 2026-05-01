@@ -27,7 +27,7 @@ jest.mock('../../../src/services/admin', () => ({
 
 describe('UpsellBanner', () => {
   beforeEach(() => {
-    localStorage.removeItem('STRAPI_FREE_TRIAL_ENDS_AT:test-uuid');
+    localStorage.removeItem('KAYONA_FREE_TRIAL_ENDS_AT:test-uuid');
   });
 
   beforeAll(() => {
@@ -87,7 +87,7 @@ describe('UpsellBanner', () => {
       data: {},
     }));
 
-    localStorage.setItem('STRAPI_FREE_TRIAL_ENDS_AT:test-uuid', '2025-05-21T09:50:00.000Z');
+    localStorage.setItem('KAYONA_FREE_TRIAL_ENDS_AT:test-uuid', '2025-05-21T09:50:00.000Z');
     jest.setSystemTime(new Date(2025, 4, 22));
 
     render(<UpsellBanner />);
@@ -119,7 +119,7 @@ describe('UpsellBanner', () => {
       data: {},
     }));
 
-    localStorage.setItem('STRAPI_FREE_TRIAL_ENDS_AT:test-uuid', '2025-05-10T09:50:00.000Z');
+    localStorage.setItem('KAYONA_FREE_TRIAL_ENDS_AT:test-uuid', '2025-05-10T09:50:00.000Z');
     jest.setSystemTime(new Date(2025, 4, 22));
 
     render(<UpsellBanner />);

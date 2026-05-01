@@ -75,7 +75,7 @@ const blocksData: Schema.Attribute.BlocksValue = [
     children: [
       {
         type: 'link',
-        url: 'https://strapi.io',
+        url: 'https://kayona.io',
         children: [{ type: 'text', text: 'This paragraph is just a link' }],
         rel: '',
         target: '',
@@ -101,7 +101,7 @@ const blocksData: Schema.Attribute.BlocksValue = [
       },
       {
         type: 'link',
-        url: 'https://strapi.io',
+        url: 'https://kayona.io',
         children: [
           {
             type: 'text',
@@ -181,7 +181,7 @@ const blocksData: Schema.Attribute.BlocksValue = [
         children: [
           {
             type: 'link',
-            url: 'https://strapi.io',
+            url: 'https://kayona.io',
             children: [
               {
                 type: 'text',

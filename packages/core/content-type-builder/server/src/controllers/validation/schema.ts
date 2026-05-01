@@ -137,13 +137,13 @@ const checkUserTarget: z.SuperRefinement<{
   const { target, relation, targetAttribute } = value;
 
   if (
-    target === coreUids.STRAPI_USER &&
-    (!STRAPI_USER_RELATIONS.includes(relation) || !isUndefined(targetAttribute))
+    target === coreUids.KAYONA_USER &&
+    (!KAYONA_USER_RELATIONS.includes(relation) || !isUndefined(targetAttribute))
   ) {
     ctx.addIssue({
       code: z.ZodIssueCode.custom,
       path: ['relation'],
-      message: `Relations to ${coreUids.STRAPI_USER} must be one of the following values: ${STRAPI_USER_RELATIONS.join(', ')} without targetAttribute`,
+      message: `Relations to ${coreUids.KAYONA_USER} must be one of the following values: ${KAYONA_USER_RELATIONS.join(', ')} without targetAttribute`,
     });
   }
 };
@@ -222,7 +222,7 @@ const minLengthSchema = z.number().int().positive().optional();
 const requiredSchema = z.boolean().optional();
 const uniqueSchema = z.boolean().optional();
 
-const STRAPI_USER_RELATIONS = ['oneToOne', 'oneToMany'];
+const KAYONA_USER_RELATIONS = ['oneToOne', 'oneToMany'];
 
 const baseRelationSchema = z.object({
   type: z.literal('relation'),

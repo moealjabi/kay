@@ -18,7 +18,7 @@ const SUPPORTED_IMAGE_TYPES = [
 ] as const;
 
 const createAIMetadataService = ({ strapi }: { strapi: Core.Strapi }) => {
-  const aiServerUrl = process.env.STRAPI_AI_URL || 'https://strapi-ai.apps.strapi.io';
+  const aiServerUrl = process.env.KAYONA_AI_URL || 'https://strapi-ai.apps.strapi.io';
 
   return {
     async isEnabled() {

@@ -1,27 +1,27 @@
 {
-  "name": "@strapi/database",
+  "name": "@kayona/database",
   "version": "5.44.0",
-  "description": "Strapi's database layer",
-  "homepage": "https://strapi.io",
+  "description": "Kayona's database layer",
+  "homepage": "https://kayona.io",
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/moealjabi/kay/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strapi/strapi.git",
+    "url": "https://github.com/moealjabi/kay.git",
     "directory": "packages/core/database"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
+    "name": "Kayona Solutions SAS",
+    "email": "hello@kayona.io",
+    "url": "https://kayona.io"
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Kayona Solutions SAS",
+      "email": "hello@kayona.io",
+      "url": "https://kayona.io"
     }
   ],
   "main": "./dist/index.js",
@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@paralleldrive/cuid2": "2.2.2",
-    "@strapi/utils": "5.44.0",
+    "@kayona/utils": "5.44.0",
     "ajv": "8.18.0",
     "date-fns": "2.30.0",
     "debug": "4.3.4",

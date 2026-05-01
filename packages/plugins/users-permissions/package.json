@@ -1,27 +1,27 @@
 {
-  "name": "@strapi/plugin-users-permissions",
+  "name": "@kayona/plugin-users-permissions",
   "version": "5.44.0",
   "description": "Protect your API with a full-authentication process based on JWT",
-  "homepage": "https://strapi.io",
+  "homepage": "https://kayona.io",
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/moealjabi/kay/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strapi/strapi.git",
+    "url": "https://github.com/moealjabi/kay.git",
     "directory": "packages/plugins/users-permissions"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
+    "name": "Kayona Solutions SAS",
+    "email": "hello@kayona.io",
+    "url": "https://kayona.io"
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Kayona Solutions SAS",
+      "email": "hello@kayona.io",
+      "url": "https://kayona.io"
     }
   ],
   "exports": {
@@ -53,9 +53,9 @@
     "watch": "run -T rollup -c -w"
   },
   "dependencies": {
-    "@strapi/design-system": "2.2.0",
-    "@strapi/icons": "2.2.0",
-    "@strapi/utils": "5.44.0",
+    "@kayona/design-system": "2.2.0",
+    "@kayona/icons": "2.2.0",
+    "@kayona/utils": "5.44.0",
     "bcryptjs": "2.4.3",
     "formik": "2.4.5",
     "grant": "5.4.24",
@@ -75,7 +75,7 @@
     "zod": "3.25.67"
   },
   "devDependencies": {
-    "@strapi/strapi": "5.44.0",
+    "@kayona/strapi": "5.44.0",
     "@testing-library/dom": "10.4.1",
     "@testing-library/react": "16.3.0",
     "@testing-library/user-event": "14.6.1",
@@ -86,7 +86,7 @@
     "styled-components": "6.1.8"
   },
   "peerDependencies": {
-    "@strapi/strapi": "^5.0.0",
+    "@kayona/strapi": "^5.0.0",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",
     "react-router-dom": "^6.30.3",

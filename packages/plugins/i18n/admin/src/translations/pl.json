@@ -40,7 +40,7 @@
   "Settings.list.actions.unpublishAdditionalInfos": "To cofnie publikację aktywnych wersji językowych <em>(z pluginu Internacjonalizacja)</em>",
   "Settings.list.actions.edit": "Edytuj",
   "Settings.list.description": "Skonfiguruj ustawienia dla pluginu Internacjonalizacja",
-  "Settings.list.empty.description": "To nie jest standardowe zachowanie, co oznacza że ostatecznie zmieniłeś bazę danych manualnie. Aby poprawnie używać strapi upewnij się, że w bazie masz zapisane przynajmniej jedno ustawienie regionalne.",
+  "Settings.list.empty.description": "To nie jest standardowe zachowanie, co oznacza że ostatecznie zmieniłeś bazę danych manualnie. Aby poprawnie używać kayona upewnij się, że w bazie masz zapisane przynajmniej jedno ustawienie regionalne.",
   "Settings.list.empty.title": "Brak języków.",
   "Settings.aiLocalizations.label": "Tłumaczenia AI",
   "Settings.aiLocalizations.description": "Za każdym razem, gdy zapiszesz coś w Menedżerze treści, nasza sztuczna inteligencja użyje domyślnego języka, aby automatycznie przetłumaczyć wszystkie inne języki.",

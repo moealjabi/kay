@@ -156,7 +156,7 @@ const PreviewPage = () => {
           colors: previewHighlightColors,
         })})`;
         const sendMessage = getSendMessage(iframeRef);
-        sendMessage(PUBLIC_EVENTS.STRAPI_SCRIPT, { script });
+        sendMessage(PUBLIC_EVENTS.KAYONA_SCRIPT, { script });
       }
     };
 
@@ -247,13 +247,13 @@ const PreviewPage = () => {
 
   const onPreview = () => {
     iframeRef?.current?.contentWindow?.postMessage(
-      { type: 'strapiUpdate' },
+      { type: .kayona.pdate' },
       // The iframe origin is safe to use since it must be provided through the allowedOrigins config
       new URL(iframeRef.current.src).origin
     );
   };
 
-  const hasAdvancedPreview = window.strapi.features.isEnabled('cms-advanced-preview');
+  const hasAdvancedPreview = window.kayona.features.isEnabled('cms-advanced-preview');
 
   return (
     <>

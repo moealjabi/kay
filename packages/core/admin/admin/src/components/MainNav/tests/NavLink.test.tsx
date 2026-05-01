@@ -39,7 +39,7 @@ describe('NavLink', () => {
 
 describe('NavLink with external URL', () => {
   const ExternalLinkComponent = () => (
-    <NavLink.Link to="https://market.strapi.io" target="_blank" rel="noopener noreferrer">
+    <NavLink.Link to="https://market.kayona.io" target="_blank" rel="noopener noreferrer">
       <NavLink.Tooltip label="marketplace-tooltip">
         <NavLink.Icon label="marketplace">
           <House data-testid="external-link-icon" />
@@ -60,7 +60,7 @@ describe('NavLink with external URL', () => {
     renderRTL(<ExternalLinkComponent />);
     const link = screen.getByRole('link');
     expect(link).toBeInTheDocument();
-    expect(link).toHaveAttribute('href', 'https://market.strapi.io');
+    expect(link).toHaveAttribute('href', 'https://market.kayona.io');
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });

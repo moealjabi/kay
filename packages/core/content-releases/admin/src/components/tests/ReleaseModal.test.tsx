@@ -6,13 +6,13 @@ import { ReleaseModal } from '../ReleaseModal';
 
 describe('ReleaseModal', () => {
   beforeAll(() => {
-    window.strapi.future = {
+    window.kayona.future = {
       isEnabled: () => true,
     };
   });
 
   afterAll(() => {
-    window.strapi.future = {
+    window.kayona.future = {
       isEnabled: () => false,
     };
   });

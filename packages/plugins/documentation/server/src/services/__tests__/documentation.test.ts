@@ -517,7 +517,7 @@ describe('Documentation plugin | Documentation service', () => {
 
   /**
    * Regression: OpenAPI files must resolve to dist.* in production when distDir !== appDir (TypeScript builds).
-   * @see https://github.com/strapi/strapi/issues/22701
+   * @see https://github.com/moealjabi/kay/issues/22701
    */
   describe('Filesystem paths for generated OpenAPI (app vs dist)', () => {
     let previousDirs: typeof global.strapi.dirs;

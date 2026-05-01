@@ -95,7 +95,7 @@ const PurchaseContentHistory = () => {
                 <Flex gap={2} marginTop={7}>
                   <LinkButton
                     variant="default"
-                    href="https://strapi.io/pricing-self-hosted?utm_campaign=In-Product-CTA&utm_source=Content-History"
+                    href="https://kayona.io/pricing-self-hosted?utm_campaign=In-Product-CTA&utm_source=Content-History"
                   >
                     {formatMessage({
                       id: 'Settings.page.purchase.upgrade.cta',
@@ -105,7 +105,7 @@ const PurchaseContentHistory = () => {
                   <LinkButton
                     variant="tertiary"
                     endIcon={<ExternalLink />}
-                    href="https://strapi.io/features/content-history?utm_campaign=In-Product-CTA&utm_source=Content-History"
+                    href="https://kayona.io/features/content-history?utm_campaign=In-Product-CTA&utm_source=Content-History"
                   >
                     {formatMessage({
                       id: 'Settings.page.purchase.learn-more.cta',

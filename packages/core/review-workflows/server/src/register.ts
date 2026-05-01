@@ -104,10 +104,10 @@ function persistRWOnDowngrade({ strapi }: { strapi: Core.Strapi }) {
 
 export default async ({ strapi }: { strapi: Core.Strapi }) => {
   // Data Migrations
-  strapi.hook('strapi::content-types.beforeSync').register(migrateStageAttribute);
-  strapi.hook('strapi::content-types.afterSync').register(persistRWOnDowngrade({ strapi }));
+  strapi.hook('kayona::content-types.beforeSync').register(migrateStageAttribute);
+  strapi.hook('kayona::content-types.afterSync').register(persistRWOnDowngrade({ strapi }));
   strapi
-    .hook('strapi::content-types.afterSync')
+    .hook('kayona::content-types.afterSync')
     .register(migrateReviewWorkflowStagesColor)
     .register(migrateReviewWorkflowStagesRoles)
     .register(migrateReviewWorkflowStagesTransferToRoles)

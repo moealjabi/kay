@@ -35,7 +35,7 @@ export const FreeTrialWelcomeModal = () => {
   const { formatMessage } = useIntl();
   const [open, setOpen] = useState(true);
   const [previouslyOpen, setPreviouslyOpen] = useScopedPersistentState(
-    'STRAPI_FREE_TRIAL_WELCOME_MODAL',
+    'KAYONA_FREE_TRIAL_WELCOME_MODAL',
     false
   );
   const { license } = useLicenseLimits();

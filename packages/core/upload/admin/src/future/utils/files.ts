@@ -54,7 +54,7 @@ export const getFileExtension = (ext?: string | null) =>
  * ```
  */
 export const prefixFileUrlWithBackendUrl = (fileURL?: string) => {
-  return !!fileURL && fileURL.startsWith('/') ? `${window.strapi.backendURL}${fileURL}` : fileURL;
+  return !!fileURL && fileURL.startsWith('/') ? `${window.kayona.backendURL}${fileURL}` : fileURL;
 };
 
 /**

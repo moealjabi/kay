@@ -40,7 +40,7 @@
   "Settings.list.actions.unpublishAdditionalInfos": "Tímto zrušíte publikaci verzí aktivního jazyka <em>(z Internationalization)</em>",
   "Settings.list.actions.edit": "Upravit jazyk {name}",
   "Settings.list.description": "Nakonfigurujte nastavení pluginu Internationalization",
-  "Settings.list.empty.description": "Toto není obvyklé chování, což znamená, že jste pravděpodobně databázi upravili ručně. Ujistěte se, že máte v databázi uložen alespoň jeden jazyk, abyste mohli Strapi používat správně.",
+  "Settings.list.empty.description": "Toto není obvyklé chování, což znamená, že jste pravděpodobně databázi upravili ručně. Ujistěte se, že máte v databázi uložen alespoň jeden jazyk, abyste mohli Kayona používat správně.",
   "Settings.list.empty.title": "Nejsou zde žádné jazyky.",
   "Settings.aiLocalizations.label": "AI překlady",
   "Settings.aiLocalizations.description": "Pokaždé, když uložíte změnu v Content Manageru, naše AI použije váš výchozí jazyk k automatickému překladu všech ostatních jazyků.",

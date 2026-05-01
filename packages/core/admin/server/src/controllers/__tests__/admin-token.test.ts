@@ -9,8 +9,8 @@ describe('Admin Token Controller', () => {
   // ---------------------------------------------------------------------------
   // Shared fixtures
   // ---------------------------------------------------------------------------
-  const ownerUser = { id: 42, roles: [{ code: 'strapi-editor' }] };
-  const superAdmin = { id: 99, roles: [{ code: 'strapi-super-admin' }] };
+  const ownerUser = { id: 42, roles: [{ code: 'kayona-editor' }] };
+  const superAdmin = { id: 99, roles: [{ code: 'kayona-super-admin' }] };
 
   const baseAdminToken = {
     id: 1,
@@ -211,7 +211,7 @@ describe('Admin Token Controller', () => {
     });
 
     test('Forbids revoke when caller is not owner and not super-admin', async () => {
-      const otherUser = { id: 77, roles: [{ code: 'strapi-editor' }] };
+      const otherUser = { id: 77, roles: [{ code: 'kayona-editor' }] };
       const revoke = jest.fn();
       const forbidden = jest.fn();
       const getById = jest.fn().mockResolvedValue(baseAdminToken);
@@ -289,7 +289,7 @@ describe('Admin Token Controller', () => {
     });
 
     test('Forbids regenerate when caller is not the owner', async () => {
-      const otherUser = { id: 55, roles: [{ code: 'strapi-editor' }] };
+      const otherUser = { id: 55, roles: [{ code: 'kayona-editor' }] };
       const regenerate = jest.fn();
       const getById = jest.fn().mockResolvedValue(baseAdminToken);
       const forbidden = jest.fn();
@@ -413,7 +413,7 @@ describe('Admin Token Controller', () => {
     });
 
     test('Returns 404 when caller is not owner and not super-admin', async () => {
-      const otherUser = { id: 77, roles: [{ code: 'strapi-editor' }] };
+      const otherUser = { id: 77, roles: [{ code: 'kayona-editor' }] };
       const getById = jest.fn().mockResolvedValue(baseAdminToken);
       const notFound = jest.fn();
       const send = jest.fn();
@@ -518,7 +518,7 @@ describe('Admin Token Controller', () => {
     });
 
     test('Forbids update when caller is not owner and not super-admin', async () => {
-      const otherUser = { id: 77, roles: [{ code: 'strapi-editor' }] };
+      const otherUser = { id: 77, roles: [{ code: 'kayona-editor' }] };
       const update = jest.fn();
       const forbidden = jest.fn();
       const getById = jest.fn(() => baseAdminToken);
@@ -620,7 +620,7 @@ describe('Admin Token Controller', () => {
     });
 
     test('Returns 403 when caller is not owner and not super-admin', async () => {
-      const otherUser = { id: 77, roles: [{ code: 'strapi-editor' }] };
+      const otherUser = { id: 77, roles: [{ code: 'kayona-editor' }] };
       const getById = jest.fn().mockResolvedValue(baseAdminToken);
       const forbidden = jest.fn();
       const ctx = createContext(

@@ -65,7 +65,7 @@ export default {
       shouldNotify,
       shouldStopCreate: isNil(permittedSeats) ? false : currentActiveUserCount >= permittedSeats,
       licenseLimitStatus,
-      isHostedOnStrapiCloud: env('STRAPI_HOSTING', null) === 'strapi.cloud',
+      isHostedOnStrapiCloud: env('KAYONA_HOSTING', null) === 'strapi.cloud',
       type: strapi.ee.type,
       isTrial: strapi.ee.isTrial,
       features: strapi.ee.features.list() ?? [],

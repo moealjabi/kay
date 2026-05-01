@@ -71,7 +71,7 @@ const PreviewSidePanel: PanelComponent = ({ model, documentId, document }) => {
         <Button
           variant="tertiary"
           tag={Link}
-          to="https://docs.strapi.io/cms/features/preview"
+          to="https://docs.kayona.io/cms/features/preview"
           target="_blank"
           rel="noopener noreferrer"
           width="100%"

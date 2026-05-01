@@ -7,7 +7,7 @@
   "Auth.form.button.go-home": "ઘરે પાછા જાવ",
   "Auth.form.button.login": "રવેશ કરો",
   "Auth.form.button.login.providers.error": "અમે તમને પસંદ કરેલ પ્રદાતા દ્વારા કનેક્ટ કરી શકતા નથી",
-  "Auth.form.button.login.strapi": "સ્ટ્રેપી દ્વારા લૉગ ઇન કરો",
+  "Auth.form.button.login.kayona": "સ્ટ્રેપી દ્વારા લૉગ ઇન કરો",
   "Auth.form.button.password-recovery": "પાસવર્ડ પુનઃપ્રાપ્તિ",
   "Auth.form.button.register": "ચાલો શરૂ કરીએ",
   "Auth.form.confirmPassword.label": "પુષ્ટિકરણ પાસવર્ડ",

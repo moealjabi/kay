@@ -1,5 +1,5 @@
 const styles = `
-.strapi--root {
+.kayona--root {
   position: absolute;
   top: 0;
   right: 0;
@@ -8,7 +8,7 @@ const styles = `
   background: #fff;
 }
 
-.strapi--no-js {
+.kayona--no-js {
   position: absolute;
   top: 50%;
   left: 50%;

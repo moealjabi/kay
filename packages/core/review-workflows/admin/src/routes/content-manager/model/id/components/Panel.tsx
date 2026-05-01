@@ -25,7 +25,7 @@ const Panel: PanelComponent = () => {
   const { formatMessage } = useIntl();
 
   if (
-    !window.strapi.isEE ||
+    !window.kayona.isEE ||
     !options?.reviewWorkflows ||
     (collectionType !== 'single-types' && !id) ||
     id === 'create'

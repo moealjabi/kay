@@ -119,7 +119,7 @@ describe('metrics', () => {
     expect(fetch).toHaveBeenCalled();
 
     const callParameters = fetch.mock.calls[0] as any[];
-    expect(callParameters[0]).toBe('https://analytics.strapi.io/api/v2/track');
+    expect(callParameters[0]).toBe('https://analytics.kayona.io/api/v2/track');
 
     expect(callParameters[1].method).toBe('POST');
     expect(JSON.parse(callParameters[1].body)).toMatchObject({

@@ -1,6 +1,6 @@
 /**
  * Strapi telemetry package.
- * You can learn more at https://docs.strapi.io/developer-docs/latest/getting-started/usage-information.html
+ * You can learn more at https://docs.kayona.io/developer-docs/latest/getting-started/usage-information.html
  */
 
 import type { Core } from '@strapi/types';
@@ -22,7 +22,7 @@ const createTelemetryInstance = (strapi: Core.Strapi) => {
   const uuid = strapi.config.get('uuid');
   const telemetryDisabled = strapi.config.get('packageJsonStrapi.telemetryDisabled');
   const isDisabled =
-    !uuid || isTruthy(process.env.STRAPI_TELEMETRY_DISABLED) || isTruthy(telemetryDisabled);
+    !uuid || isTruthy(process.env.KAYONA_TELEMETRY_DISABLED) || isTruthy(telemetryDisabled);
 
   const sender = createSender(strapi);
   const sendEvent = wrapWithRateLimit(sender, { limitedEvents: LIMITED_EVENTS });

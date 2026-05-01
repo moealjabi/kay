@@ -38,7 +38,7 @@ export function usePreviewInputManager(
      */
     if (!['component', 'dynamiczone'].includes(type)) {
       const sendMessage = getSendMessage(iframe);
-      sendMessage(INTERNAL_EVENTS.STRAPI_FIELD_CHANGE, { field: name, value });
+      sendMessage(INTERNAL_EVENTS.KAYONA_FIELD_CHANGE, { field: name, value });
     }
   }, [name, value, iframe, type]);
 
@@ -48,13 +48,13 @@ export function usePreviewInputManager(
     onFocus: () => {
       if (hasInputPopoverParent) return;
 
-      sendMessage(INTERNAL_EVENTS.STRAPI_FIELD_FOCUS, { field: name });
+      sendMessage(INTERNAL_EVENTS.KAYONA_FIELD_FOCUS, { field: name });
     },
     onBlur: () => {
       if (hasInputPopoverParent) return;
 
       setPopoverField?.(null);
-      sendMessage(INTERNAL_EVENTS.STRAPI_FIELD_BLUR, { field: name });
+      sendMessage(INTERNAL_EVENTS.KAYONA_FIELD_BLUR, { field: name });
     },
   };
 }

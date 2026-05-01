@@ -114,8 +114,8 @@ export const sortOptions = [
 export const pageSizes = [10, 20, 50, 100];
 
 export const localStorageKeys = {
-  modalView: `STRAPI_UPLOAD_MODAL_VIEW`,
-  view: `STRAPI_UPLOAD_LIBRARY_VIEW`,
+  modalView: `KAYONA_UPLOAD_MODAL_VIEW`,
+  view: `KAYONA_UPLOAD_LIBRARY_VIEW`,
 };
 
 export const viewOptions = {

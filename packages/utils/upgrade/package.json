@@ -1,7 +1,7 @@
 {
-  "name": "@strapi/upgrade",
+  "name": "@kayona/upgrade",
   "version": "5.44.0",
-  "description": "CLI to upgrade Strapi applications effortless",
+  "description": "CLI to upgrade Kayona applications effortless",
   "keywords": [
     "strapi",
     "package",
@@ -10,26 +10,26 @@
     "migrate",
     "version"
   ],
-  "homepage": "https://strapi.io",
+  "homepage": "https://kayona.io",
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/moealjabi/kay/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strapi/strapi.git",
+    "url": "https://github.com/moealjabi/kay.git",
     "directory": "packages/utils/upgrade"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
+    "name": "Kayona Solutions SAS",
+    "email": "hello@kayona.io",
+    "url": "https://kayona.io"
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Kayona Solutions SAS",
+      "email": "hello@kayona.io",
+      "url": "https://kayona.io"
     }
   ],
   "exports": {
@@ -65,7 +65,7 @@
     "watch": "run -T rollup -c -w"
   },
   "dependencies": {
-    "@strapi/utils": "5.44.0",
+    "@kayona/utils": "5.44.0",
     "chalk": "4.1.2",
     "cli-table3": "0.6.5",
     "commander": "8.3.0",
@@ -83,7 +83,7 @@
     "undici": "6.25.0"
   },
   "devDependencies": {
-    "@strapi/types": "5.44.0",
+    "@kayona/types": "5.44.0",
     "@types/fs-extra": "11.0.4",
     "@types/jscodeshift": "17.3.0",
     "eslint-config-custom": "5.44.0",

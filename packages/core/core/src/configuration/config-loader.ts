@@ -10,7 +10,7 @@ const MISTAKEN_FILENAMES = {
   plugin: 'plugins',
 };
 
-// the following are restricted to prevent conflicts with existing STRAPI_* env vars or root level config options
+// the following are restricted to prevent conflicts with existing KAYONA_* env vars or root level config options
 // must all be lowercase to match validator
 const RESTRICTED_FILENAMES = [
   // existing env vars
@@ -42,7 +42,7 @@ const RESTRICTED_FILENAMES = [
 ];
 
 // Existing Strapi configuration files
-const STRAPI_CONFIG_FILENAMES = [
+const KAYONA_CONFIG_FILENAMES = [
   'admin',
   'server',
   'api',
@@ -95,7 +95,7 @@ export default (dir: string) => {
     }
 
     // restricted names and Strapi configs are also restricted from being prefixes
-    const restrictedPrefix = [...RESTRICTED_FILENAMES, ...STRAPI_CONFIG_FILENAMES].find(
+    const restrictedPrefix = [...RESTRICTED_FILENAMES, ...KAYONA_CONFIG_FILENAMES].find(
       (restrictedName) =>
         restrictedName.startsWith(baseNameLower) && restrictedName !== baseNameLower
     );

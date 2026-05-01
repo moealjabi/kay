@@ -191,7 +191,7 @@ describe('Restore ', () => {
     const result = await restoreConfigs(strapi, config);
 
     expect(strapi.db.query).toBeCalledTimes(1);
-    expect(strapi.db.query).toBeCalledWith('strapi::core-store');
+    expect(strapi.db.query).toBeCalledWith('kayona::core-store');
     expect(result.data).toMatchObject(config.value);
   });
 
@@ -232,7 +232,7 @@ describe('Restore ', () => {
     };
     const result = await restoreConfigs(strapi, config);
     expect(strapi.db.query).toBeCalledTimes(1);
-    expect(strapi.db.query).toBeCalledWith('strapi::webhook');
+    expect(strapi.db.query).toBeCalledWith('kayona::webhook');
     expect(result.data).toMatchObject(omit(['id'])(config.value));
   });
 });

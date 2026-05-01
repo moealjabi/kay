@@ -49,7 +49,7 @@ const ListConfiguration = () => {
 
   const { isLoading: isLoadingLayout, list, edit } = useDocLayout();
   const [displayedHeaderNames, setDisplayedHeaderNames] = useScopedPersistentState<string[] | null>(
-    `STRAPI_LIST_VIEW_DISPLAYED_HEADERS:${model}`,
+    `KAYONA_LIST_VIEW_DISPLAYED_HEADERS:${model}`,
     null
   );
 

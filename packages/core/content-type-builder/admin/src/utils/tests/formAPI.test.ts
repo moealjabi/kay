@@ -66,7 +66,7 @@ describe('formsAPI', () => {
 
   /**
    * extendFields advanced callbacks receive `customField` in args (built-in: falsy; custom field modal: metadata).
-   * @see https://github.com/strapi/strapi/pull/22521
+   * @see https://github.com/moealjabi/kay/pull/22521
    */
   describe('extendFields and customField in getAdvancedForm args', () => {
     it('passes falsy customField for built-in attribute forms', () => {

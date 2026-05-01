@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 
 import { useNotification } from '@strapi/admin/strapi-admin';
 
-import { STRAPI_MAX_ATTACHMENT_SIZE, STRAPI_MAX_ATTACHMENTS } from '../lib/constants';
+import { KAYONA_MAX_ATTACHMENT_SIZE, KAYONA_MAX_ATTACHMENTS } from '../lib/constants';
 import { generateId } from '../lib/misc';
 import { useStrapiChat } from '../providers/ChatProvider';
 
@@ -60,21 +60,21 @@ export function useAttachments() {
       const attachedFileCount = Array.from(newFiles).length;
       let limitedFiles: File[] = newFiles;
 
-      if (attachmentCount + attachedFileCount > STRAPI_MAX_ATTACHMENTS) {
+      if (attachmentCount + attachedFileCount > KAYONA_MAX_ATTACHMENTS) {
         toggleNotification({
           type: 'danger',
           title: 'File limit reached: ',
-          message: `You can only upload up to ${STRAPI_MAX_ATTACHMENTS} files`,
+          message: `You can only upload up to ${KAYONA_MAX_ATTACHMENTS} files`,
         });
 
         // Prune the ones that would exceed the limit
-        const limit = STRAPI_MAX_ATTACHMENTS - attachmentCount;
+        const limit = KAYONA_MAX_ATTACHMENTS - attachmentCount;
         limitedFiles = newFiles.slice(0, limit);
       }
 
       // Size limit
       for (const file of limitedFiles) {
-        if (file.size > STRAPI_MAX_ATTACHMENT_SIZE) {
+        if (file.size > KAYONA_MAX_ATTACHMENT_SIZE) {
           toggleNotification({
             type: 'danger',
             title: 'File too large: ',

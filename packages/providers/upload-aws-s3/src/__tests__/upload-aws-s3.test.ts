@@ -65,7 +65,7 @@ describe('AWS-S3 provider', () => {
     test('Should populate file.url with the baseUrl when provided, appending the file key to the url', async () => {
       uploadMock.done.mockImplementationOnce(() =>
         Promise.resolve({
-          Location: 'https://strapi.io/path/to/fileNameHash.json',
+          Location: 'https://kayona.io/path/to/fileNameHash.json',
           $metadata: {},
         })
       );
@@ -101,7 +101,7 @@ describe('AWS-S3 provider', () => {
     test('Should populate file.url with the returned Location when no baseUrl is provided', async () => {
       uploadMock.done.mockImplementationOnce(() =>
         Promise.resolve({
-          Location: 'https://strapi.io/path/from/location/fileName.json',
+          Location: 'https://kayona.io/path/from/location/fileName.json',
           $metadata: {},
         })
       );
@@ -130,7 +130,7 @@ describe('AWS-S3 provider', () => {
 
       expect(uploadMock.done).toBeCalled();
       expect(file.url).toBeDefined();
-      expect(file.url).toEqual('https://strapi.io/path/from/location/fileName.json');
+      expect(file.url).toEqual('https://kayona.io/path/from/location/fileName.json');
     });
 
     test('Should populate file.url and prepend the https protocol to the Location when missing', async () => {
@@ -165,7 +165,7 @@ describe('AWS-S3 provider', () => {
 
       expect(uploadMock.done).toBeCalled();
       expect(file.url).toBeDefined();
-      expect(file.url).toEqual('https://strapi.io/path/to/fileNameHash.json');
+      expect(file.url).toEqual('https://kayona.io/path/to/fileNameHash.json');
     });
 
     test('Should populate file.url with baseUrl even if location lacks protocol', async () => {

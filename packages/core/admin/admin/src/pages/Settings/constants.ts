@@ -1,6 +1,6 @@
 import type { RouteObject } from 'react-router-dom';
 
-const isAdminTokensFutureEnabled = () => window.strapi.future.isEnabled('adminTokens') === true;
+const isAdminTokensFutureEnabled = () => window.kayona.future.isEnabled('adminTokens') === true;
 
 const ADMIN_TOKEN_ROUTES: RouteObject[] = [
   {

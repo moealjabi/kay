@@ -13,7 +13,7 @@ const pluginName = 'Deploy';
 // eslint-disable-next-line import/no-default-export
 export default {
   register(app: StrapiApp) {
-    const { backendURL } = window.strapi;
+    const { backendURL } = window.kayona;
 
     // Only add the plugin menu link and registering it if the project is on development (localhost).
     if (backendURL?.includes('localhost')) {

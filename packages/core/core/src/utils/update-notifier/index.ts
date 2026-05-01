@@ -22,7 +22,7 @@ const boxenOptions: boxen.Options = {
 const getUpdateMessage = (newVersion: string, currentVersion: string) => {
   const currentVersionLog = chalk.dim(currentVersion);
   const newVersionLog = chalk.green(newVersion);
-  const releaseLink = chalk.bold('https://github.com/strapi/strapi/releases');
+  const releaseLink = chalk.bold('https://github.com/moealjabi/kay/releases');
 
   return `
 A new version of Strapi is available ${currentVersionLog} → ${newVersionLog}
@@ -84,9 +84,9 @@ export const createUpdateNotifier = (strapi: Core.Strapi) => {
   };
 
   // TODO v6: Remove this warning
-  if (env.bool('STRAPI_DISABLE_UPDATE_NOTIFICATION', false)) {
+  if (env.bool('KAYONA_DISABLE_UPDATE_NOTIFICATION', false)) {
     strapi.log.warn(
-      'STRAPI_DISABLE_UPDATE_NOTIFICATION is no longer supported. Instead, set logger.updates.enabled to false in your server configuration.'
+      'KAYONA_DISABLE_UPDATE_NOTIFICATION is no longer supported. Instead, set logger.updates.enabled to false in your server configuration.'
     );
   }
 

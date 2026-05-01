@@ -9,7 +9,7 @@ import type { Modules } from '@strapi/types';
 const { ValidationError } = errors;
 
 const webhookModel: Model = {
-  uid: 'strapi::webhook',
+  uid: 'kayona::webhook',
   singularName: 'strapi_webhooks',
   tableName: 'strapi_webhooks',
   attributes: {
@@ -107,19 +107,19 @@ const createWebhookStore = ({ db }: { db: Database }): WebhookStore => {
       return this.allowedEvents.get(key);
     },
     async findWebhooks() {
-      const results = await db.query('strapi::webhook').findMany();
+      const results = await db.query('kayona::webhook').findMany();
 
       return results.map(fromDBObject);
     },
     async findWebhook(id) {
-      const result = await db.query('strapi::webhook').findOne({ where: { id } });
+      const result = await db.query('kayona::webhook').findOne({ where: { id } });
       return result ? fromDBObject(result) : null;
     },
     async createWebhook(data) {
       await webhookEventValidator(this.allowedEvents, data.events);
 
       return db
-        .query('strapi::webhook')
+        .query('kayona::webhook')
         .create({
           data: toDBObject({ ...data, isEnabled: true }),
         })
@@ -128,7 +128,7 @@ const createWebhookStore = ({ db }: { db: Database }): WebhookStore => {
     async updateWebhook(id, data) {
       await webhookEventValidator(this.allowedEvents, data.events);
 
-      const webhook = await db.query('strapi::webhook').update({
+      const webhook = await db.query('kayona::webhook').update({
         where: { id },
         data: toDBObject(data),
       });
@@ -136,7 +136,7 @@ const createWebhookStore = ({ db }: { db: Database }): WebhookStore => {
       return webhook ? fromDBObject(webhook) : null;
     },
     async deleteWebhook(id) {
-      const webhook = await db.query('strapi::webhook').delete({ where: { id } });
+      const webhook = await db.query('kayona::webhook').delete({ where: { id } });
       return webhook ? fromDBObject(webhook) : null;
     },
   };

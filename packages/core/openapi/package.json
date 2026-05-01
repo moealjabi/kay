@@ -1,27 +1,27 @@
 {
-  "name": "@strapi/openapi",
+  "name": "@kayona/openapi",
   "version": "5.44.0",
-  "description": "A tool set to help generate and validate API documentation for Strapi projects",
-  "homepage": "https://strapi.io",
+  "description": "A tool set to help generate and validate API documentation for Kayona projects",
+  "homepage": "https://kayona.io",
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/moealjabi/kay/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strapi/strapi.git",
+    "url": "https://github.com/moealjabi/kay.git",
     "directory": "packages/core/openapi"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
+    "name": "Kayona Solutions SAS",
+    "email": "hello@kayona.io",
+    "url": "https://kayona.io"
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Kayona Solutions SAS",
+      "email": "hello@kayona.io",
+      "url": "https://kayona.io"
     }
   ],
   "main": "./dist/index.js",
@@ -62,7 +62,7 @@
     "zod": "3.25.67"
   },
   "devDependencies": {
-    "@strapi/types": "5.44.0",
+    "@kayona/types": "5.44.0",
     "@types/debug": "^4"
   }
 }

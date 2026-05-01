@@ -8,7 +8,7 @@ declare global {
 }
 
 const setWindowStrapi = (adminTokensEnabled: boolean) => {
-  window.strapi = {
+  window.kayona = {
     future: {
       isEnabled: jest.fn((featureName: string) => {
         return featureName === 'adminTokens' ? adminTokensEnabled : false;
@@ -27,7 +27,7 @@ const setWindowStrapi = (adminTokensEnabled: boolean) => {
 
 describe('adminTokens future flag', () => {
   afterEach(() => {
-    delete window.strapi;
+    delete window.kayona;
   });
 
   test('removes the Admin Tokens settings link when disabled', () => {

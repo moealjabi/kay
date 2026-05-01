@@ -24,7 +24,7 @@ export const homepageService = ({ strapi }: { strapi: Core.Strapi }) => {
     const countAdmins = await getService('user').count();
     const countLocales = (await strapi.plugin('i18n')?.service('locales')?.count()) ?? null;
     const countsAssets = await strapi.db.query('plugin::upload.file').count();
-    const countWebhooks = await strapi.db.query('strapi::webhook').count();
+    const countWebhooks = await strapi.db.query('kayona::webhook').count();
 
     const componentCategories = new Set(
       Object.values(strapi.components).map((component) => component.category)

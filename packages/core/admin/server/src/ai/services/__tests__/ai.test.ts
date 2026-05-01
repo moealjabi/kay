@@ -60,8 +60,8 @@ describe('AI Container', () => {
   };
 
   const setupValidEnvironment = () => {
-    process.env.STRAPI_LICENSE = 'test-license';
-    process.env.STRAPI_AI_URL = 'http://ai-server.com';
+    process.env.KAYONA_LICENSE = 'test-license';
+    process.env.KAYONA_AI_URL = 'http://ai-server.com';
   };
 
   const createSuccessfulTokenFetch = (responseData = {}) => {
@@ -99,7 +99,7 @@ describe('AI Container', () => {
 
     test('Should throw when no EE license is found', async () => {
       const mockStrapi = createMockStrapi() as any;
-      delete process.env.STRAPI_LICENSE;
+      delete process.env.KAYONA_LICENSE;
       mockFs.readFileSync.mockImplementation(() => {
         throw new Error('File not found');
       });
@@ -109,7 +109,7 @@ describe('AI Container', () => {
         'AI usage data request failed. Check server logs for details.'
       );
       expect(mockStrapi.log.error).toHaveBeenCalledWith(
-        'AI usage data request failed: No EE license found. Please ensure STRAPI_LICENSE environment variable is set or license.txt file exists.'
+        'AI usage data request failed: No EE license found. Please ensure KAYONA_LICENSE environment variable is set or license.txt file exists.'
       );
     });
 
@@ -160,7 +160,7 @@ describe('AI Container', () => {
       const mockStrapi = createMockStrapi() as any;
       const aiContainer = createAiAdminService({ strapi: mockStrapi });
 
-      delete process.env.STRAPI_LICENSE;
+      delete process.env.KAYONA_LICENSE;
       mockFs.readFileSync.mockImplementation(() => {
         throw new Error('File not found');
       });
@@ -170,7 +170,7 @@ describe('AI Container', () => {
       );
 
       expect(mockStrapi.log.error).toHaveBeenCalledWith(
-        'AI token request failed: No EE license found. Please ensure STRAPI_LICENSE environment variable is set or license.txt file exists.'
+        'AI token request failed: No EE license found. Please ensure KAYONA_LICENSE environment variable is set or license.txt file exists.'
       );
     });
 
@@ -178,8 +178,8 @@ describe('AI Container', () => {
       const mockStrapi = createMockStrapi() as any;
       const aiContainer = createAiAdminService({ strapi: mockStrapi });
 
-      delete process.env.STRAPI_LICENSE;
-      process.env.STRAPI_AI_URL = 'http://ai-server.com';
+      delete process.env.KAYONA_LICENSE;
+      process.env.KAYONA_AI_URL = 'http://ai-server.com';
 
       mockFs.readFileSync.mockReturnValue(Buffer.from('file-license-content'));
       global.fetch = createSuccessfulTokenFetch();
@@ -272,8 +272,8 @@ describe('AI Container', () => {
       const mockStrapi = createMockStrapi() as any;
       const aiContainer = createAiAdminService({ strapi: mockStrapi });
 
-      process.env.STRAPI_LICENSE = 'test-license';
-      delete process.env.STRAPI_AI_URL;
+      process.env.KAYONA_LICENSE = 'test-license';
+      delete process.env.KAYONA_AI_URL;
 
       global.fetch = createSuccessfulTokenFetch();
 

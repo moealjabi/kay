@@ -62,7 +62,7 @@ describe('aiClient', () => {
       return Promise.resolve(responses.shift());
     });
 
-    const res = await fetchAI('https://strapi.io', { method: 'POST' });
+    const res = await fetchAI('https://kayona.io', { method: 'POST' });
     expect(res.status).toBe(200);
     expect(fetchSpy).toHaveBeenCalledTimes(2);
   });

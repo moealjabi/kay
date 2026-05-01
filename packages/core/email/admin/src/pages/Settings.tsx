@@ -395,7 +395,7 @@ const SettingsPage = () => {
                           file: './config/plugins.js',
                           link: (
                             <DocumentationLink
-                              href="https://docs.strapi.io/developer-docs/latest/plugins/email.html"
+                              href="https://docs.kayona.io/developer-docs/latest/plugins/email.html"
                               target="_blank"
                               rel="noopener noreferrer"
                             >

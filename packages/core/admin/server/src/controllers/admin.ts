@@ -101,7 +101,7 @@ export default {
     const useTypescriptOnAdmin = await isUsingTypeScript(
       path.join(strapi.dirs.app.root, 'src', 'admin')
     );
-    const isHostedOnStrapiCloud = env('STRAPI_HOSTING', null) === 'strapi.cloud';
+    const isHostedOnStrapiCloud = env('KAYONA_HOSTING', null) === 'strapi.cloud';
 
     const numberOfAllContentTypes = _.size(strapi.contentTypes);
     const numberOfComponents = _.size(strapi.components);

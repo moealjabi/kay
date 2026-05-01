@@ -4,10 +4,10 @@ describe('security utilities', () => {
   describe('extendMiddlewareConfiguration', () => {
     describe('when middleware is a string', () => {
       it('should replace string middleware with object configuration', () => {
-        const middlewares = ['strapi::logger', 'strapi::security', 'strapi::cors'];
+        const middlewares = ['kayona::logger', 'kayona::security', 'kayona::cors'];
 
         const newConfig = {
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: {
             contentSecurityPolicy: {
               directives: {
@@ -20,9 +20,9 @@ describe('security utilities', () => {
         const result = extendMiddlewareConfiguration(middlewares, newConfig);
 
         expect(result).toEqual([
-          'strapi::logger',
+          'kayona::logger',
           {
-            name: 'strapi::security',
+            name: 'kayona::security',
             config: {
               contentSecurityPolicy: {
                 directives: {
@@ -31,22 +31,22 @@ describe('security utilities', () => {
               },
             },
           },
-          'strapi::cors',
+          'kayona::cors',
         ]);
       });
 
       it('should not modify other string middlewares', () => {
-        const middlewares = ['strapi::logger', 'strapi::security', 'strapi::cors'];
+        const middlewares = ['kayona::logger', 'kayona::security', 'kayona::cors'];
 
         const newConfig = {
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: { test: 'value' },
         };
 
         const result = extendMiddlewareConfiguration(middlewares, newConfig);
 
-        expect(result[0]).toBe('strapi::logger');
-        expect(result[2]).toBe('strapi::cors');
+        expect(result[0]).toBe('kayona::logger');
+        expect(result[2]).toBe('kayona::cors');
       });
     });
 
@@ -54,7 +54,7 @@ describe('security utilities', () => {
       it('should merge configurations with array concatenation', () => {
         const middlewares = [
           {
-            name: 'strapi::security',
+            name: 'kayona::security',
             config: {
               contentSecurityPolicy: {
                 directives: {
@@ -67,7 +67,7 @@ describe('security utilities', () => {
         ];
 
         const newConfig = {
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: {
             contentSecurityPolicy: {
               directives: {
@@ -81,7 +81,7 @@ describe('security utilities', () => {
         const result = extendMiddlewareConfiguration(middlewares, newConfig);
 
         expect(result[0]).toEqual({
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: {
             contentSecurityPolicy: {
               directives: {
@@ -97,7 +97,7 @@ describe('security utilities', () => {
       it('should merge deep nested objects', () => {
         const middlewares = [
           {
-            name: 'strapi::security',
+            name: 'kayona::security',
             config: {
               contentSecurityPolicy: {
                 useDefaults: true,
@@ -113,7 +113,7 @@ describe('security utilities', () => {
         ];
 
         const newConfig = {
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: {
             contentSecurityPolicy: {
               directives: {
@@ -127,7 +127,7 @@ describe('security utilities', () => {
         const result = extendMiddlewareConfiguration(middlewares, newConfig);
 
         expect(result[0]).toEqual({
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: {
             contentSecurityPolicy: {
               useDefaults: true,
@@ -147,7 +147,7 @@ describe('security utilities', () => {
       it('should handle empty arrays correctly', () => {
         const middlewares = [
           {
-            name: 'strapi::security',
+            name: 'kayona::security',
             config: {
               contentSecurityPolicy: {
                 directives: {
@@ -159,7 +159,7 @@ describe('security utilities', () => {
         ];
 
         const newConfig = {
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: {
             contentSecurityPolicy: {
               directives: {
@@ -180,7 +180,7 @@ describe('security utilities', () => {
         const originalImgSrc = ["'self'", 'data:'];
         const middlewares = [
           {
-            name: 'strapi::security',
+            name: 'kayona::security',
             config: {
               contentSecurityPolicy: {
                 directives: {
@@ -192,7 +192,7 @@ describe('security utilities', () => {
         ];
 
         const newConfig = {
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: {
             contentSecurityPolicy: {
               directives: {
@@ -212,15 +212,15 @@ describe('security utilities', () => {
     describe('when middleware name does not match', () => {
       it('should return middlewares unchanged', () => {
         const middlewares = [
-          'strapi::logger',
+          'kayona::logger',
           {
-            name: 'strapi::cors',
+            name: 'kayona::cors',
             config: { origin: true },
           },
         ];
 
         const newConfig = {
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: { test: 'value' },
         };
 
@@ -235,7 +235,7 @@ describe('security utilities', () => {
       it('should handle empty middlewares array', () => {
         const middlewares: any[] = [];
         const newConfig = {
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: { test: 'value' },
         };
 
@@ -247,12 +247,12 @@ describe('security utilities', () => {
       it('should handle middleware with no config', () => {
         const middlewares = [
           {
-            name: 'strapi::security',
+            name: 'kayona::security',
           },
         ];
 
         const newConfig = {
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: {
             contentSecurityPolicy: {
               directives: {
@@ -265,7 +265,7 @@ describe('security utilities', () => {
         const result = extendMiddlewareConfiguration(middlewares, newConfig);
 
         expect(result[0]).toEqual({
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: {
             contentSecurityPolicy: {
               directives: {
@@ -284,7 +284,7 @@ describe('security utilities', () => {
         ];
 
         const newConfig = {
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: { newTest: 'newValue' },
         };
 
@@ -300,7 +300,7 @@ describe('security utilities', () => {
       it('should handle typical CSP extension for AI features', () => {
         const middlewares = [
           {
-            name: 'strapi::security',
+            name: 'kayona::security',
             config: {
               contentSecurityPolicy: {
                 useDefaults: true,
@@ -319,7 +319,7 @@ describe('security utilities', () => {
         ];
 
         const newConfig = {
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: {
             contentSecurityPolicy: {
               directives: {
@@ -353,7 +353,7 @@ describe('security utilities', () => {
       it('should handle preview frame-src configuration', () => {
         const middlewares = [
           {
-            name: 'strapi::security',
+            name: 'kayona::security',
             config: {
               contentSecurityPolicy: {
                 directives: {
@@ -367,7 +367,7 @@ describe('security utilities', () => {
         const allowedOrigins = ['https://preview.example.com', 'https://staging.example.com'];
 
         const newConfig = {
-          name: 'strapi::security',
+          name: 'kayona::security',
           config: {
             contentSecurityPolicy: {
               directives: {

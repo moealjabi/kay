@@ -34,7 +34,7 @@ const getModelConfigurations = async (keys: string[]) => {
   }
 
   const configKeys = keys.map((k) => `${STORE_KEY_PREFIX}${configurationKey(k)}`);
-  const results = await strapi.db.query('strapi::core-store').findMany({
+  const results = await strapi.db.query('kayona::core-store').findMany({
     where: {
       key: { $in: configKeys },
     },
@@ -81,12 +81,12 @@ const setModelConfiguration = async (key: string, value: any) => {
 
 const deleteKey = (key: any) => {
   return strapi.db
-    .query('strapi::core-store')
+    .query('kayona::core-store')
     .delete({ where: { key: `${STORE_KEY_PREFIX}configuration_${key}` } });
 };
 
 const findByKey = async (key: any) => {
-  const results = await strapi.db.query('strapi::core-store').findMany({
+  const results = await strapi.db.query('kayona::core-store').findMany({
     where: {
       key: {
         $startsWith: key,

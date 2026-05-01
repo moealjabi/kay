@@ -5,7 +5,7 @@ import { GraphQLError, type GraphQLFormattedError } from 'graphql';
 
 const { HttpError, ForbiddenError, UnauthorizedError, ApplicationError, ValidationError } = errors;
 
-const formatToCode = (name: string) => `STRAPI_${toUpper(snakeCase(name))}`;
+const formatToCode = (name: string) => `KAYONA_${toUpper(snakeCase(name))}`;
 const formatErrorToExtension = (error: any) => ({
   error: pick(['name', 'message', 'details'])(error),
 });

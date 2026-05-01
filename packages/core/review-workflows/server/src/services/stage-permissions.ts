@@ -90,7 +90,7 @@ export default ({ strapi }: { strapi: Core.Strapi }) => {
         return false;
       }
 
-      if (userRoles.some((role) => role.code === 'strapi-super-admin')) {
+      if (userRoles.some((role) => role.code === 'kayona-super-admin')) {
         return true;
       }
 
@@ -105,7 +105,7 @@ export default ({ strapi }: { strapi: Core.Strapi }) => {
         return false;
       }
 
-      if (userRoles.some((role) => role.code === 'strapi-super-admin')) {
+      if (userRoles.some((role) => role.code === 'kayona-super-admin')) {
         return true;
       }
 
@@ -132,7 +132,7 @@ export default ({ strapi }: { strapi: Core.Strapi }) => {
         return false;
       }
 
-      if (userRoles.some((role) => role.code === 'strapi-super-admin')) {
+      if (userRoles.some((role) => role.code === 'kayona-super-admin')) {
         return true;
       }
 

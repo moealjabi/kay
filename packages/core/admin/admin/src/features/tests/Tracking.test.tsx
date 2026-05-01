@@ -47,7 +47,7 @@ const setup = () =>
 
 describe('useTracking', () => {
   beforeAll(() => {
-    window.strapi.telemetryDisabled = false;
+    window.kayona.telemetryDisabled = false;
   });
 
   afterEach(() => {
@@ -63,7 +63,7 @@ describe('useTracking', () => {
       const res = await result.current.trackUsage('didSaveContentType');
 
       expect(axios.post).toBeCalledWith(
-        'https://analytics.strapi.io/api/v2/track',
+        'https://analytics.kayona.io/api/v2/track',
         {
           userId: 'someTestUserId',
           event: 'didSaveContentType',
@@ -92,7 +92,7 @@ describe('useTracking', () => {
   }
 
   it('should not fire axios.post if strapi.telemetryDisabled is true', async () => {
-    window.strapi.telemetryDisabled = true;
+    window.kayona.telemetryDisabled = true;
 
     const { result } = setup();
 
@@ -100,7 +100,7 @@ describe('useTracking', () => {
 
     expect(axios.post).not.toBeCalled();
 
-    window.strapi.telemetryDisabled = false;
+    window.kayona.telemetryDisabled = false;
   });
 
   it('should fail gracefully if the request does not work', async () => {

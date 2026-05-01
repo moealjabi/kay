@@ -91,7 +91,7 @@ const PurchaseAuditLogs = () => {
                 <Flex gap={2} marginTop={7}>
                   <LinkButton
                     variant="default"
-                    href="https://strapi.io/pricing-self-hosted?utm_campaign=In-Product-CTA&utm_source=Audit-Logs"
+                    href="https://kayona.io/pricing-self-hosted?utm_campaign=In-Product-CTA&utm_source=Audit-Logs"
                   >
                     {formatMessage({
                       id: 'Settings.page.purchase.upgrade.cta',
@@ -101,7 +101,7 @@ const PurchaseAuditLogs = () => {
                   <LinkButton
                     variant="tertiary"
                     endIcon={<ExternalLink />}
-                    href="https://strapi.io/features/audit-logs?utm_campaign=In-Product-CTA&utm_source=Audit-Logs"
+                    href="https://kayona.io/features/audit-logs?utm_campaign=In-Product-CTA&utm_source=Audit-Logs"
                   >
                     {formatMessage({
                       id: 'Settings.page.purchase.learn-more.cta',

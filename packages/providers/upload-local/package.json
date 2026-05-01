@@ -1,31 +1,31 @@
 {
-  "name": "@strapi/provider-upload-local",
+  "name": "@kayona/provider-upload-local",
   "version": "5.44.0",
   "description": "Local provider for strapi upload",
   "keywords": [
     "upload",
     "strapi"
   ],
-  "homepage": "https://strapi.io",
+  "homepage": "https://kayona.io",
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/moealjabi/kay/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strapi/strapi.git",
+    "url": "https://github.com/moealjabi/kay.git",
     "directory": "packages/providers/upload-local"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
+    "name": "Kayona Solutions SAS",
+    "email": "hello@kayona.io",
+    "url": "https://kayona.io"
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Kayona Solutions SAS",
+      "email": "hello@kayona.io",
+      "url": "https://kayona.io"
     }
   ],
   "main": "./dist/index.js",
@@ -46,11 +46,11 @@
     "watch": "run -T rollup -c -w"
   },
   "dependencies": {
-    "@strapi/utils": "5.44.0",
+    "@kayona/utils": "5.44.0",
     "fs-extra": "11.3.4"
   },
   "devDependencies": {
-    "@strapi/types": "5.44.0",
+    "@kayona/types": "5.44.0",
     "@types/fs-extra": "11.0.4",
     "@types/jest": "29.5.2",
     "eslint-config-custom": "5.44.0",

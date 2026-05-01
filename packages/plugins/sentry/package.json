@@ -1,27 +1,27 @@
 {
-  "name": "@strapi/plugin-sentry",
+  "name": "@kayona/plugin-sentry",
   "version": "5.44.0",
-  "description": "Send Strapi error events to Sentry",
-  "homepage": "https://strapi.io",
+  "description": "Send Kayona error events to Sentry",
+  "homepage": "https://kayona.io",
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/moealjabi/kay/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strapi/strapi.git",
+    "url": "https://github.com/moealjabi/kay.git",
     "directory": "packages/plugins/sentry"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
+    "name": "Kayona Solutions SAS",
+    "email": "hello@kayona.io",
+    "url": "https://kayona.io"
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Kayona Solutions SAS",
+      "email": "hello@kayona.io",
+      "url": "https://kayona.io"
     }
   ],
   "exports": {
@@ -58,18 +58,18 @@
   },
   "dependencies": {
     "@sentry/node": "7.112.2",
-    "@strapi/design-system": "2.2.0",
-    "@strapi/icons": "2.2.0"
+    "@kayona/design-system": "2.2.0",
+    "@kayona/icons": "2.2.0"
   },
   "devDependencies": {
-    "@strapi/strapi": "5.44.0",
+    "@kayona/strapi": "5.44.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-router-dom": "6.30.3",
     "styled-components": "6.1.8"
   },
   "peerDependencies": {
-    "@strapi/strapi": "^5.0.0",
+    "@kayona/strapi": "^5.0.0",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",
     "react-router-dom": "^6.30.3",
@@ -82,7 +82,7 @@
   "strapi": {
     "name": "sentry",
     "displayName": "Sentry",
-    "description": "Send Strapi error events to Sentry.",
+    "description": "Send Kayona error events to Sentry.",
     "kind": "plugin"
   }
 }

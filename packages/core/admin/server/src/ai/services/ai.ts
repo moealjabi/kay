@@ -56,7 +56,7 @@ const createAiAdminService = ({ strapi }: { strapi: Core.Strapi }) => {
       throw new Error(`${errorPrefix.replace(/:$/, '')}. Check server logs for details.`);
     }
 
-    let eeLicense = process.env.STRAPI_LICENSE;
+    let eeLicense = process.env.KAYONA_LICENSE;
 
     if (!eeLicense) {
       try {
@@ -69,7 +69,7 @@ const createAiAdminService = ({ strapi }: { strapi: Core.Strapi }) => {
 
     if (!eeLicense) {
       strapi.log.error(
-        `${errorPrefix} No EE license found. Please ensure STRAPI_LICENSE environment variable is set or license.txt file exists.`
+        `${errorPrefix} No EE license found. Please ensure KAYONA_LICENSE environment variable is set or license.txt file exists.`
       );
       throw new Error(`${errorPrefix.replace(/:$/, '')}. Check server logs for details.`);
     }
@@ -80,7 +80,7 @@ const createAiAdminService = ({ strapi }: { strapi: Core.Strapi }) => {
       throw new Error(`${errorPrefix.replace(/:$/, '')}. Check server logs for details.`);
     }
 
-    const aiServerUrl = process.env.STRAPI_AI_URL || 'https://strapi-ai.apps.strapi.io';
+    const aiServerUrl = process.env.KAYONA_AI_URL || 'https://strapi-ai.apps.strapi.io';
 
     return { eeLicense, projectId, aiServerUrl };
   };

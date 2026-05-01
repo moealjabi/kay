@@ -38,7 +38,7 @@
   "Settings.list.actions.publishAdditionalInfos": "Dit publiceert de actieve taalversies <em>(van Internationalisatie)</em>",
   "Settings.list.actions.unpublishAdditionalInfos": "Dit depubliceert de actieve taalversies <em>(van Internationalisatie)</em>",
   "Settings.list.description": "Configureer de instellingen voor de Internationalisatie-plugin",
-  "Settings.list.empty.description": "Dit is ongebruikelijk gedrag, wat betekent dat je mogelijk de database handmatig heeft gewijzigd. Zorg ervoor dat er minstens één taal is opgeslagen in je database om Strapi correct te kunnen gebruiken.",
+  "Settings.list.empty.description": "Dit is ongebruikelijk gedrag, wat betekent dat je mogelijk de database handmatig heeft gewijzigd. Zorg ervoor dat er minstens één taal is opgeslagen in je database om Kayona correct te kunnen gebruiken.",
   "Settings.list.empty.title": "Er zijn geen talen.",
   "Settings.locales.default": "Standaard",
   "Settings.locales.list.sort.default": "Sorteren op standaardtaal",

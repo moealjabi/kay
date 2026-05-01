@@ -60,7 +60,7 @@ const CopyAPIToken = ({ Step, dispatch }: StepContentProps) => (
       values={{
         spacer: <Box paddingTop={2} />,
         a: (msg: React.ReactNode) => (
-          <Link isExternal href="https://docs.strapi.io/cms/features/api-tokens#usage">
+          <Link isExternal href="https://docs.kayona.io/cms/features/api-tokens#usage">
             {msg}
           </Link>
         ),

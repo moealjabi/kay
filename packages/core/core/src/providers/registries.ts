@@ -27,12 +27,12 @@ export default defineProvider({
   async register(strapi) {
     await loadApplicationContext(strapi);
 
-    strapi.get('hooks').set('strapi::content-types.beforeSync', hooks.createAsyncParallelHook());
-    strapi.get('hooks').set('strapi::content-types.afterSync', hooks.createAsyncParallelHook());
+    strapi.get('hooks').set('kayona::content-types.beforeSync', hooks.createAsyncParallelHook());
+    strapi.get('hooks').set('kayona::content-types.afterSync', hooks.createAsyncParallelHook());
 
     // Content migration to enable draft and publish
-    strapi.hook('strapi::content-types.beforeSync').register(syncMigrations.disable);
-    strapi.hook('strapi::content-types.afterSync').register(syncMigrations.enable);
+    strapi.hook('kayona::content-types.beforeSync').register(syncMigrations.disable);
+    strapi.hook('kayona::content-types.afterSync').register(syncMigrations.enable);
 
     // Database migrations
     strapi.db.migrations.providers.internal.register(discardDocumentDrafts);

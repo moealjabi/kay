@@ -1,7 +1,7 @@
 {
-  "name": "@strapi/data-transfer",
+  "name": "@kayona/data-transfer",
   "version": "5.44.0",
-  "description": "Data transfer capabilities for Strapi",
+  "description": "Data transfer capabilities for Kayona",
   "keywords": [
     "strapi",
     "data",
@@ -11,26 +11,26 @@
     "backup",
     "restore"
   ],
-  "homepage": "https://strapi.io",
+  "homepage": "https://kayona.io",
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/moealjabi/kay/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strapi/strapi.git",
+    "url": "https://github.com/moealjabi/kay.git",
     "directory": "packages/core/data-transfer"
   },
   "license": "SEE LICENSE IN LICENSE",
   "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
+    "name": "Kayona Solutions SAS",
+    "email": "hello@kayona.io",
+    "url": "https://kayona.io"
   },
   "maintainers": [
     {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Kayona Solutions SAS",
+      "email": "hello@kayona.io",
+      "url": "https://kayona.io"
     }
   ],
   "main": "./dist/index.js",
@@ -51,9 +51,9 @@
     "watch": "run -T rollup -c -w"
   },
   "dependencies": {
-    "@strapi/logger": "5.44.0",
-    "@strapi/types": "5.44.0",
-    "@strapi/utils": "5.44.0",
+    "@kayona/logger": "5.44.0",
+    "@kayona/types": "5.44.0",
+    "@kayona/utils": "5.44.0",
     "chalk": "4.1.2",
     "cli-table3": "0.6.5",
     "commander": "8.3.0",
@@ -70,7 +70,7 @@
     "ws": "8.17.1"
   },
   "devDependencies": {
-    "@strapi/database": "5.44.0",
+    "@kayona/database": "5.44.0",
     "@types/fs-extra": "11.0.4",
     "@types/jest": "29.5.2",
     "@types/koa": "2.13.4",

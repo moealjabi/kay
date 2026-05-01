@@ -315,7 +315,7 @@
   "preview.device.mobile": "Mobiel",
   "preview.device.select": "Selecteer apparaattype",
   "preview.error.different-document": "Dit veld komt uit een ander document",
-  "preview.error.incomplete-strapi-source": "Dit veld mist vereiste voorbeeldinformatie",
+  "preview.error.incomplete-kayona-source": "Dit veld mist vereiste voorbeeldinformatie",
   "preview.error.invalid-field-path": "Kan dit veld niet vinden in het huidige document",
   "preview.error.relations-not-handled": "Inline bewerken van relaties wordt momenteel niet ondersteund.",
   "preview.header.close": "Voorbeeld sluiten",

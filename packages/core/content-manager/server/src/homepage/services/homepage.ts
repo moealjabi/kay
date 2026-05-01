@@ -25,7 +25,7 @@ const createHomepageService = ({ strapi }: { strapi: Core.Strapi }) => {
      * Don't use the strapi.store util because we need to make
      * more precise queries than exact key matches, in order to make as few queries as possible.
      */
-    const coreStore = strapi.db.query('strapi::core-store');
+    const coreStore = strapi.db.query('kayona::core-store');
     const rawConfigurations = await coreStore.findMany({
       where: {
         key: {

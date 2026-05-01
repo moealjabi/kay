@@ -14,7 +14,7 @@ describe('API Token Controller', () => {
       description: 'api-token_tests-description',
       type: 'read-only',
     };
-    const callingUser = { id: 1, roles: [{ code: 'strapi-super-admin' }] };
+    const callingUser = { id: 1, roles: [{ code: 'kayona-super-admin' }] };
 
     test('Fails if API Token already exists', async () => {
       const exists = jest.fn(() => true);
@@ -278,7 +278,7 @@ describe('API Token Controller', () => {
     test('List API tokens successfully', async () => {
       const list = jest.fn().mockResolvedValue(tokens);
       const send = jest.fn();
-      const callingUser = { id: 1, roles: [{ code: 'strapi-super-admin' }] };
+      const callingUser = { id: 1, roles: [{ code: 'kayona-super-admin' }] };
       const ctx = createContext({}, { send, state: { user: callingUser } });
 
       global.strapi = {
@@ -358,7 +358,7 @@ describe('API Token Controller', () => {
       type: 'read-only',
     };
 
-    const superAdmin = { id: 99, roles: [{ code: 'strapi-super-admin' }] };
+    const superAdmin = { id: 99, roles: [{ code: 'kayona-super-admin' }] };
 
     test('Regenerates an ownerless content API token successfully', async () => {
       const regenerate = jest.fn().mockResolvedValue(legacyToken);
@@ -423,7 +423,7 @@ describe('API Token Controller', () => {
       type: 'read-only',
     };
 
-    const superAdmin = { id: 99, roles: [{ code: 'strapi-super-admin' }] };
+    const superAdmin = { id: 99, roles: [{ code: 'kayona-super-admin' }] };
 
     test('Retrieve a content API token includes accessKey for any caller', async () => {
       const tokenWithKey = { ...legacyToken, accessKey: 'plaintext-key' };
@@ -545,7 +545,7 @@ describe('API Token Controller', () => {
         const getByName = jest.fn(() => null);
         const notFound = jest.fn();
         const send = jest.fn();
-        const callingUser = { id: 1, roles: [{ code: 'strapi-super-admin' }] };
+        const callingUser = { id: 1, roles: [{ code: 'kayona-super-admin' }] };
         const ctx = createContext(
           { body: legacyBody, params: { id } },
           { notFound, send, state: { user: callingUser } }
@@ -580,7 +580,7 @@ describe('API Token Controller', () => {
         const update = jest.fn();
         const getById = jest.fn(() => ({ id, ...legacyBody }));
         const getByName = jest.fn(() => null);
-        const callingUser = { id: 1, roles: [{ code: 'strapi-super-admin' }] };
+        const callingUser = { id: 1, roles: [{ code: 'kayona-super-admin' }] };
         const ctx = createContext(
           { body: invalidBody, params: { id } },
           { state: { user: callingUser } }
@@ -612,7 +612,7 @@ describe('API Token Controller', () => {
         const update = jest.fn();
         const getById = jest.fn(() => ({ id, ...legacyBody }));
         const getByName = jest.fn(() => null);
-        const callingUser = { id: 1, roles: [{ code: 'strapi-super-admin' }] };
+        const callingUser = { id: 1, roles: [{ code: 'kayona-super-admin' }] };
         const ctx = createContext(
           { body: invalidBody, params: { id } },
           { state: { user: callingUser } }
@@ -644,7 +644,7 @@ describe('API Token Controller', () => {
         const update = jest.fn();
         const getById = jest.fn(() => ({ id, ...legacyBody }));
         const getByName = jest.fn(() => null);
-        const callingUser = { id: 1, roles: [{ code: 'strapi-super-admin' }] };
+        const callingUser = { id: 1, roles: [{ code: 'kayona-super-admin' }] };
         const ctx = createContext(
           { body: mutatedKindBody, params: { id } },
           { state: { user: callingUser } }

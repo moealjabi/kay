@@ -782,7 +782,7 @@ const skippedRelationStats = new Map<string, SkippedRelationStatsEntry>();
 
 const DUPLICATE_ERROR_CODES = new Set(['23505', 'ER_DUP_ENTRY', 'SQLITE_CONSTRAINT_UNIQUE']);
 
-const debug = createDebug('strapi::migration::discard-drafts');
+const debug = createDebug('kayona::migration::discard-drafts');
 
 /**
  * Converts arbitrary id values into numbers when possible so we can safely index into

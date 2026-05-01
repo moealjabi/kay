@@ -7,7 +7,7 @@
  * Captures per-migration start/end times by subscribing to Umzug's native
  * `migrating` / `migrated` events. Umzug is a stable public dep of Strapi
  * (currently 3.8.1); its event API is documented and unlikely to change,
- * so this is more durable than patching anything inside @strapi/database.
+ * so this is more durable than patching anything inside @kayona/database.
  *
  * Strategy:
  *   1. Patch Module._load so each `require('umzug')` returns a module whose

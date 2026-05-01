@@ -1,7 +1,7 @@
 import { createStrapiInstance } from 'api-tests/strapi';
 import { createAuthRequest } from 'api-tests/request';
 import { createAgent } from 'api-tests/agent';
-import type { Core } from '@strapi/types';
+import type { Core } from '@kayona/types';
 
 describe('Admin Admin Token future flag (api)', () => {
   let strapi: Core.Strapi;

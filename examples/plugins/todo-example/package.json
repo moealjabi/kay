@@ -24,19 +24,19 @@
     "lint": "eslint ."
   },
   "peerDependencies": {
-    "@strapi/strapi": "workspace:*"
+    "@kayona/strapi": "workspace:*"
   },
   "dependencies": {
-    "@strapi/design-system": "2.2.0",
-    "@strapi/icons": "2.2.0",
+    "@kayona/design-system": "2.2.0",
+    "@kayona/icons": "2.2.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.30.3",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
-    "@strapi/sdk-plugin": "^6.0.1",
-    "@strapi/strapi": "workspace:*",
+    "@kayona/sdk-plugin": "^6.0.1",
+    "@kayona/strapi": "workspace:*",
     "eslint": "8.57.1"
   },
   "engines": {

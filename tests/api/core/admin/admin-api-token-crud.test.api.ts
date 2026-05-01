@@ -1,7 +1,7 @@
 import { omit } from 'lodash';
 import { createStrapiInstance } from 'api-tests/strapi';
 import { createAuthRequest } from 'api-tests/request';
-import type { Core } from '@strapi/types';
+import type { Core } from '@kayona/types';
 import constants from '../../../../packages/core/admin/server/src/services/constants';
 
 describe('Admin Content API Token CRUD (api)', () => {

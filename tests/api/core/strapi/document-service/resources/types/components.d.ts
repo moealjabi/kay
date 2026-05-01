@@ -1,4 +1,4 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Schema, Attribute } from '@kayona/strapi';
 
 export interface ArticleComp extends Schema.Component {
   collectionName: 'components_article_comments';
@@ -81,7 +81,7 @@ export interface MixedContentNestedMediaWrapper extends Schema.Component {
   };
 }
 
-declare module '@strapi/types' {
+declare module '@kayona/types' {
   export module Shared {
     export interface Components {
       'article.comp': ArticleComp;

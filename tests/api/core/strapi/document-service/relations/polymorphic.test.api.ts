@@ -1,4 +1,4 @@
-import type { Core } from '@strapi/types';
+import type { Core } from '@kayona/types';
 
 import { createTestSetup, destroyTestSetup } from '../../../../utils/builder-helper';
 import baseResources from '../resources/index';

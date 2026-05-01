@@ -35,7 +35,7 @@ async function seedTransferTestMedia(appPath, options = {}) {
   const count = options.count ?? parseCountEnv();
   const bytes = options.bytes ?? parseBytesEnv();
 
-  const { createStrapi } = require('@strapi/strapi');
+  const { createStrapi } = require('@kayona/strapi');
   const { CUSTOM_TRANSFER_TOKEN_ACCESS_KEY } = require(path.join(appPath, 'src', 'constants.js'));
 
   const strapi = createStrapi({ appDir: appPath, distDir: appPath });

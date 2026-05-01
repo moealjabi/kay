@@ -1,4 +1,4 @@
-import type { Schema, Data } from '@strapi/strapi';
+import type { Schema, Data } from '@kayona/strapi';
 
 export const AUTHOR_UID = 'api::author.author' as const;
 export type Author = Data.ContentType<typeof AUTHOR_UID>;

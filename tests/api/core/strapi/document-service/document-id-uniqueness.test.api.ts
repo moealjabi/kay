@@ -1,5 +1,5 @@
-import type { Core } from '@strapi/types';
-import { errors } from '@strapi/utils';
+import type { Core } from '@kayona/types';
+import { errors } from '@kayona/utils';
 import { createTestSetup, destroyTestSetup } from '../../../utils/builder-helper';
 
 const ARTICLE_UID = 'api::article.article';

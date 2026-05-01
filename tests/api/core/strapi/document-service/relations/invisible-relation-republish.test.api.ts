@@ -2,7 +2,7 @@
  * visible: false relations must survive documents().update(..., status: 'published').
  * Internal publish load must populate invisible relations so the new published row re-attaches links.
  */
-import type { Core, UID } from '@strapi/types';
+import type { Core, UID } from '@kayona/types';
 import { testInTransaction } from '../../../../utils';
 
 const { createTestBuilder } = require('api-tests/builder');

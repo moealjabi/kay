@@ -1,4 +1,4 @@
-// import type { Core } from '@strapi/strapi';
+// import type { Core } from '@kayona/strapi';
 
 export default {
   /**

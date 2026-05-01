@@ -1,4 +1,4 @@
-import { PuzzlePiece } from '@strapi/icons';
+import { PuzzlePiece } from '@kayona/icons';
 
 import pluginPkg from '../../package.json';
 import pluginId from './pluginId';

@@ -66,8 +66,8 @@ const packageJson = {
     develop: 'strapi develop',
     start: 'strapi start',
     strapi: 'strapi',
-    upgrade: 'npx @strapi/upgrade latest',
-    'upgrade:dry': 'npx @strapi/upgrade latest --dry',
+    upgrade: 'npx @kayona/upgrade latest',
+    'upgrade:dry': 'npx @kayona/upgrade latest --dry',
     'develop:postgres': 'node scripts/develop-with-db.js postgres',
     'develop:mysql': 'node scripts/develop-with-db.js mysql',
     'develop:mariadb': 'node scripts/develop-with-db.js mariadb',
@@ -81,9 +81,9 @@ const packageJson = {
     'seed:sqlite': 'node scripts/seed-with-db.js sqlite',
   },
   dependencies: {
-    '@strapi/plugin-i18n': '4.26.0',
-    '@strapi/plugin-users-permissions': '4.26.0',
-    '@strapi/strapi': '4.26.0',
+    '@kayona/plugin-i18n': '4.26.0',
+    '@kayona/plugin-users-permissions': '4.26.0',
+    '@kayona/strapi': '4.26.0',
     'better-sqlite3': '9.6.0',
     entities: '2.2.0',
     mysql2: '3.20.0',
@@ -389,7 +389,7 @@ CONTENT_TYPES.forEach((contentType) => {
  * ${contentType} controller
  */
 
-const { createCoreController } = require('@strapi/strapi').factories;
+const { createCoreController } = require('@kayona/strapi').factories;
 
 module.exports = createCoreController('api::${contentType}.${contentType}');
 `;
@@ -407,7 +407,7 @@ module.exports = createCoreController('api::${contentType}.${contentType}');
  * ${contentType} router
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
+const { createCoreRouter } = require('@kayona/strapi').factories;
 
 module.exports = createCoreRouter('api::${contentType}.${contentType}');
 `;
@@ -425,7 +425,7 @@ module.exports = createCoreRouter('api::${contentType}.${contentType}');
  * ${contentType} service
  */
 
-const { createCoreService } = require('@strapi/strapi').factories;
+const { createCoreService } = require('@kayona/strapi').factories;
 
 module.exports = createCoreService('api::${contentType}.${contentType}');
 `;

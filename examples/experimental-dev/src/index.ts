@@ -1,4 +1,4 @@
-import '@strapi/strapi';
+import '@kayona/strapi';
 
 export default {
   /**

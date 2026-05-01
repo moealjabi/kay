@@ -39,7 +39,7 @@ function requireBetterSqlite() {
     return require('better-sqlite3');
   } catch (error) {
     throw new Error(
-      'better-sqlite3 is required for sqlite operations. It is a peer dep of @strapi/strapi and should be present via workspace hoisting; if not, install it in examples/complex.'
+      'better-sqlite3 is required for sqlite operations. It is a peer dep of @kayona/strapi and should be present via workspace hoisting; if not, install it in examples/complex.'
     );
   }
 }

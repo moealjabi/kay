@@ -2,7 +2,7 @@
 
 const coffee = require('coffee');
 // eslint-disable-next-line import/no-extraneous-dependencies
-const { createStrapi } = require('@strapi/core');
+const { createStrapi } = require('@kayona/core');
 
 const utils = require('../../../../utils');
 const { loadTestAppEnv } = require('../../../../utils/helpers');

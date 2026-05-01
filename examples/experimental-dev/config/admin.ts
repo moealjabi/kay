@@ -1,4 +1,4 @@
-import type { Core } from '@strapi/strapi';
+import type { Core } from '@kayona/strapi';
 
 const adminConfig = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Admin => ({
   auth: {

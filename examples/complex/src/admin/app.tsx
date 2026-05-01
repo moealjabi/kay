@@ -1,4 +1,4 @@
-import type { StrapiApp } from '@strapi/strapi/admin';
+import type { StrapiApp } from '@kayona/strapi/admin';
 
 export default {
   config: {

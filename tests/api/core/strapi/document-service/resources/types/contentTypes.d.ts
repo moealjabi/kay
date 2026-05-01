@@ -1,4 +1,4 @@
-import type { Internal, Schema } from '@strapi/types';
+import type { Internal, Schema } from '@kayona/types';
 
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
@@ -816,7 +816,7 @@ export interface ApiMixedContentMixedContent extends Struct.CollectionTypeSchema
   };
 }
 
-declare module '@strapi/types' {
+declare module '@kayona/types' {
   export module Public {
     export module Registries {
       export interface ContentTypesSchemas {

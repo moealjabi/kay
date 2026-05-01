@@ -2,6 +2,6 @@
  * relation controller
  */
 
-import { factories } from '@strapi/strapi';
+import { factories } from '@kayona/strapi';
 
 export default factories.createCoreController('api::relation.relation');

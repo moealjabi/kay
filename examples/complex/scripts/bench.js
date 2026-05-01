@@ -10,7 +10,7 @@
  *   suite  — run baseline + candidate across all 4 DBs (chained runs)
  *
  * Strapi source resolution (currently only `local` is implemented):
- *   local         — use the monorepo workspace-linked @strapi/*
+ *   local         — use the monorepo workspace-linked @kayona/*
  *                   To swap between branches: git checkout <branch> && yarn bench:run
  *   experimental  — install 0.0.0-experimental.<sha> into .bench-install/<ver>/
  *                   (NOT YET IMPLEMENTED — error thrown)
@@ -139,12 +139,12 @@ function captureEnv(db) {
 }
 
 function captureStrapiSource() {
-  // Read @strapi/strapi version actually resolved (so `local` reports the
+  // Read @kayona/strapi version actually resolved (so `local` reports the
   // monorepo's current version + branch + sha).
   let version = null;
   try {
     // eslint-disable-next-line global-require
-    version = require('@strapi/strapi/package.json').version;
+    version = require('@kayona/strapi/package.json').version;
   } catch {
     /* leave null */
   }
@@ -239,8 +239,8 @@ function runMigrationsOnce(db, hookOutputPath) {
   // (same path Strapi's own CLI uses via `strapi build` / `strapi develop`).
   // Then boot Strapi pointing at the compiled output.
   const script = `
-    const tsUtils = require('@strapi/typescript-utils');
-    const { createStrapi } = require('@strapi/strapi');
+    const tsUtils = require('@kayona/typescript-utils');
+    const { createStrapi } = require('@kayona/strapi');
     (async () => {
       const cwd = process.cwd();
       if (await tsUtils.isUsingTypeScript(cwd)) {

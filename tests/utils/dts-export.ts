@@ -1,7 +1,7 @@
-import type { Core } from '@strapi/strapi';
+import type { Core } from '@kayona/strapi';
 
-import dts from '@strapi/data-transfer';
-import { createStrapi } from '@strapi/strapi';
+import dts from '@kayona/data-transfer';
+import { createStrapi } from '@kayona/strapi';
 import { ALLOWED_CONTENT_TYPES } from '../e2e/constants';
 
 const {

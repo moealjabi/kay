@@ -2,6 +2,6 @@
  * relation service
  */
 
-import { factories } from '@strapi/strapi';
+import { factories } from '@kayona/strapi';
 
 export default factories.createCoreService('api::relation.relation');

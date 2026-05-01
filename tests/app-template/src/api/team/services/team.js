@@ -4,6 +4,6 @@
  * team service
  */
 
-const { createCoreService } = require('@strapi/strapi').factories;
+const { createCoreService } = require('@kayona/strapi').factories;
 
 module.exports = createCoreService('api::team.team');

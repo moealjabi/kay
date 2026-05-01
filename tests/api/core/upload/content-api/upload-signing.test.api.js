@@ -44,7 +44,7 @@ const uploadFile = (fileName = 'rec.jpg') => {
 
 describe('Content API upload controller URL signing', () => {
   beforeAll(async () => {
-    const localProviderPath = require.resolve('@strapi/provider-upload-local');
+    const localProviderPath = require.resolve('@kayona/provider-upload-local');
     jest.mock(localProviderPath, () => mockProvider());
 
     strapi = await createStrapiInstance();

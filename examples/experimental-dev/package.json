@@ -14,8 +14,8 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-users-permissions": "workspace:*",
-    "@strapi/strapi": "workspace:*",
+    "@kayona/plugin-users-permissions": "workspace:*",
+    "@kayona/strapi": "workspace:*",
     "better-sqlite3": "12.8.0",
     "react": "rc",
     "react-dom": "rc",

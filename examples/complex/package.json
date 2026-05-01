@@ -45,8 +45,8 @@
     "bench:suite": "node scripts/bench.js suite"
   },
   "dependencies": {
-    "@strapi/plugin-users-permissions": "workspace:*",
-    "@strapi/strapi": "workspace:*",
+    "@kayona/plugin-users-permissions": "workspace:*",
+    "@kayona/strapi": "workspace:*",
     "better-sqlite3": "12.8.0",
     "mysql2": "3.20.0",
     "react": "18.3.1",

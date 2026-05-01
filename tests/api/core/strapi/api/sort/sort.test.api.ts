@@ -1,6 +1,6 @@
 'use strict';
 
-import type { Core } from '@strapi/strapi';
+import type { Core } from '@kayona/strapi';
 
 import { createTestBuilder } from 'api-tests/builder';
 import { createContentAPIRequest } from 'api-tests/request';

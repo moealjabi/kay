@@ -2,7 +2,7 @@ import { createTestBuilder } from 'api-tests/builder';
 import { createStrapiInstance } from 'api-tests/strapi';
 import { createAuthRequest } from 'api-tests/request';
 import { createUtils } from 'api-tests/utils';
-import type { Core } from '@strapi/types';
+import type { Core } from '@kayona/types';
 
 /**
  * Integration tests for admin token permission sync.

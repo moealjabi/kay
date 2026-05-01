@@ -9,7 +9,7 @@
  * types that do not have matching CM core-store configuration. If we only preserve imported CT
  * permissions, newly registered content types appear in the matrix but are disabled for Super Admin.
  *
- * @param {import('@strapi/strapi').Strapi} strapi
+ * @param {import('@kayona/strapi').Strapi} strapi
  */
 module.exports = async function resyncSuperAdminAfterImport(strapi) {
   const roleService = strapi.service('admin::role');

@@ -11,12 +11,12 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "strapi": "strapi",
-    "upgrade": "npx @strapi/upgrade latest",
-    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+    "upgrade": "npx @kayona/upgrade latest",
+    "upgrade:dry": "npx @kayona/upgrade latest --dry"
   },
   "dependencies": {
-    "@strapi/plugin-users-permissions": "workspace:*",
-    "@strapi/strapi": "workspace:*",
+    "@kayona/plugin-users-permissions": "workspace:*",
+    "@kayona/strapi": "workspace:*",
     "better-sqlite3": "12.8.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
